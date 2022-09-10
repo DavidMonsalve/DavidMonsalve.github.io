@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#cabecera {
+    background: black;
+    height: 15vh;
+}
+
+#cabecera #logo {
+    margin-left: 10%;
+    width: 10%;
+    height: 100%;
+    background: blue;
+}
+#cabecera #logo #imagen_logo {
+    height: 100%;
+    width: 100%;
+}

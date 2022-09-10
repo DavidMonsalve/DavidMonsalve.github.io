@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#cabecera {
+    background: black;
+    height: 15vh;
+
+    display: flex;
+    justify-content: space-around;
+
+    position: sticky;
+}
+
+#cabecera #logo {
+    margin-left: -2%;
+    width: 10%;
+    height: 100%;
+    background: blue;
+}
+#cabecera #logo #imagen_logo {
+    height: 100%;
+    width: 100%;
+}
+
+
+#cabecera #cabeceraParteDerecha{
+    height: 100%;
+    width: 50%;
+    background: rgb(1, 1, 90);
+
+    display: flex;
+    
+
+}
+
+#cabecera #cabeceraParteDerecha #botones{
+
+    width: 50%;
+    height: 100%;
+    background: red;
+
+    justify-content: center;
+    display: flex;
+}
+
+.cabeceraBotones {
+    width: 40%;
+    background-color: red;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+#boton {
+    height: 100%;
+    width: 100%;
+    /* background-color: navy; */
+    background-image: linear-gradient(rgb(58, 58, 240) , navy);
+
+    padding: 8%;
+}
+
+#boton:hover{
+    background: grey;
+}
+
+#boton a{
+    color: white;
+    text-decoration: none;
+}
+
+#boton a:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+main {
+    height: 85vh;
+    width: 100%;
+    background-repeat: round;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: inherit;
+}
+
+
+
+main div {
+    height: 85%;
+    width: 75%;
+    background: rgb(34, 34, 34);
+
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+
+    border-radius: 1%;
+}
+
+.card {
+    flex-wrap: wrap;
+    width: 25%;
+    height: 85%;
+    background: white;
+
+    
+    margin: 3%;
+
+    transition:.8s;
+
+}
+
+.card:hover {
+    transform: scale(1.07);
+}
+
+.card:hover h2{
+    color:red;
+}
+
+.card:hover a .card-body p{
+    font-family: monospace;
+}
+
+.card-image{
+    height: 40%;
+    width: 100%;
+    background: black;
+
+    margin-bottom: 15px;
+}
+
+.card-body{
+    height: 55%;
+    background: white;
+    display: inline-block;
+    
+}
+
+.card h2{
+    font-size: 30px;
+    font-family: monospace;
+    text-align: center;
+    color: green;
+    margin-left: 25%;
+    margin-top: 8%;
+}
+
+.card p{
+    margin-top: 10%;
+    font-family: monospace;
+    color: black;
+}
+
+
+.card-1{
+    background-image: url(../img/cards/1.jpg);
+    background-size: cover;
+}
+
+.card-2{
+    background-image: url(../img/cards/2.jpg);
+    background-size: cover;
+}
+
+.card-3{
+    background-image: url(../img/cards/3.jpg);
+    background-size: cover;
+}
+
+
+.card a .card-body p{
+    text-decoration-color: black;
+    margin-left: 35%;
+    font-size: 14px;
+
+}
+
+a:active{
+    color: black;
+}
+a:hover{
+    color: black;
+}
+
+#pie{
+    height: 25vh;
+    width: 100%;
+    background: rgb(34, 34, 34);
+    position: relative;
+}
+
+#pie #socialmedia{
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    margin-top: 2%;
+
+    color: white;
+
+    display: flex;
+}
+
+#pie #socialmedia ul{
+    width: 100%;
+    height: 100%;
+
+    list-style-type: none;
+    margin: 0px;
+    padding: 00px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#pie #socialmedia ul #logocontact{
+    margin: 2%;
+    font-size: 25px;
+}
+
+#pie #copyright{
+
+    width: 100%;
+    height: 25%;
+    margin-top: 9%;
+    position: absolute;
+    color: white;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+#pie #linksFooter{
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    margin-top: 5%;
+
+    color: white;
+
+    display: flex;
+}
+
+#pie #linksFooter #linkF{
+    margin: 2%;
+    font-size: 16px;
+}
+
+#pie #linksFooter #linkF a{
+    color: white;
+    text-decoration: none;
+}
+
+#pie #linksFooter ul {
+    width: 100%;
+    height: 100%;
+
+    list-style-type: none;
+    margin: 0px;
+    padding: 00px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#pie #socialmedia #logocontact i{
+    color: white;
+    text-decoration: none;
+}
+
+#pie #socialmedia #logocontact i:hover{
+    color: white;
+    text-decoration: none;
+}
