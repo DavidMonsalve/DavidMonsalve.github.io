@@ -4,92 +4,6 @@
     box-sizing: border-box;
 }
 
-#cabecera {
-    background: black;
-    height: 15vh;
-
-    display: flex;
-    justify-content: space-around;
-
-    position: sticky;
-}
-
-#cabecera #logo {
-    margin-left: -2%;
-    width: 10%;
-    height: 100%;
-    background: blue;
-}
-#cabecera #logo #imagen_logo {
-    height: 100%;
-    width: 100%;
-}
-
-
-#cabecera #cabeceraParteDerecha{
-    height: 100%;
-    width: 50%;
-    background: rgb(1, 1, 90);
-
-    display: flex;
-    
-
-}
-
-#cabecera #cabeceraParteDerecha #botones{
-
-    width: 50%;
-    height: 100%;
-    background: red;
-
-    justify-content: center;
-    display: flex;
-}
-
-.cabeceraBotones {
-    width: 40%;
-    background-color: red;
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-  }
-
-#boton {
-    height: 100%;
-    width: 100%;
-    /* background-color: navy; */
-    background-image: linear-gradient(rgb(58, 58, 240) , navy);
-
-    padding: 8%;
-}
-
-#boton:hover{
-    background: grey;
-}
-
-#boton a{
-    color: white;
-    text-decoration: none;
-}
-
-#boton a:hover{
-    color: white;
-}
-
-
-
-
-
-
-
-
-
 main {
     height: 85vh;
     width: 100%;
@@ -213,98 +127,158 @@ a:hover{
     color: black;
 }
 
-#pie{
-    height: 25vh;
-    width: 100%;
-    background: rgb(34, 34, 34);
-    position: relative;
+
+
+
+
+
+
+/*                                                                          RESPONSIVE DESIGN                                                                                        */
+
+@media (max-width: 1445px) {
+
+    main div {
+        height: 85%;
+        width: 75%;
+        background: rgb(34, 34, 34);
+    
+    
+        display: flex;
+        justify-content: center;
+    
+        position: relative;
+        z-index: 1;
+    
+        border-radius: 1%;
+
+        flex-direction: column;
+    }
+
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: 94%;
+        height: 25%;
+        background: white;
+        
+        transition:.8s;
+    }
+
+    .card a{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+    a .card-image{
+        height: 100%;
+        width: 50%;
+
+        background-size: cover;
+    }
+
+    .card-body{
+        height: 100%;
+
+        background: white;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card a .card-body h2{
+        margin: 1%;
+        padding: 0%;
+    }
+
+    .card a .card-body p{
+        margin: 5%;
+        padding: 0%;
+    }
+
 }
 
-#pie #socialmedia{
-    height: 25%;
-    width: 100%;
-    position: absolute;
-    margin-top: 2%;
 
-    color: white;
 
-    display: flex;
+
+@media (max-width: 800px) {
+
+    main{
+        height: 150vh;
+    }
+
+    main div {
+        height: 90%;
+        width: 75%;
+        border-radius: 1%;
+        
+        background: red;
+        position: relative;
+        
+        justify-content: center;
+    
+        display: flex;
+        flex-direction: column;
+
+    
+        
+        z-index: 1;
+
+    }
+
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: 94%;
+        height: 100%;
+        background: white;
+        
+        transition:.8s;
+    }
+
+    .card a{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    a .card-image{
+        height: 100%;
+        width: 100%;
+
+        background-size: cover;
+    }
+
+    .card-body{
+        height: 100%;
+
+        background: white;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card a .card-body h2{
+        margin-left: 25%;
+        padding: 0%;
+    }
+
+    .card a .card-body p{
+        height: 40%;
+        width: 100%;
+        margin-left: 15%;
+        padding: 0%;
+    }
+
 }
 
-#pie #socialmedia ul{
-    width: 100%;
-    height: 100%;
-
-    list-style-type: none;
-    margin: 0px;
-    padding: 00px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-#pie #socialmedia ul #logocontact{
-    margin: 2%;
-    font-size: 25px;
-}
-
-#pie #copyright{
-
-    width: 100%;
-    height: 25%;
-    margin-top: 9%;
-    position: absolute;
-    color: white;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
 
 
-#pie #linksFooter{
-    height: 25%;
-    width: 100%;
-    position: absolute;
-    margin-top: 5%;
 
-    color: white;
-
-    display: flex;
-}
-
-#pie #linksFooter #linkF{
-    margin: 2%;
-    font-size: 16px;
-}
-
-#pie #linksFooter #linkF a{
-    color: white;
-    text-decoration: none;
-}
-
-#pie #linksFooter ul {
-    width: 100%;
-    height: 100%;
-
-    list-style-type: none;
-    margin: 0px;
-    padding: 00px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-#pie #socialmedia #logocontact i{
-    color: white;
-    text-decoration: none;
-}
-
-#pie #socialmedia #logocontact i:hover{
-    color: white;
-    text-decoration: none;
-}
+/*                                                                          RESPONSIVE DESIGN                                                                                        */
