@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <link rel="stylesheet" href="../style/styles.css">
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    
+ 
     <title>Document</title>
+
+
 
 </head>
 <body>
@@ -17,6 +23,11 @@
         <div id="logo">
            <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
         </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
 
         <ul class="cabeceraBotones" style="color: white;">
             <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
@@ -27,7 +38,33 @@
         </ul>
     </header>
     <main>
-
+        <section>
+            <a class="aCard" href="#">
+                <div class="card">
+                    <div class="card-image card-1"></div>
+                    <div class="card-body">
+                        <h2>Python</h2>
+                    </div>
+                </div>
+            </a>
+            <a class="aCard" href="#">
+                <div class="card">
+                    <div class="card-image card-2"></div>
+                    <div class="card-body">
+                        <h2>JavaScript</h2>
+                    </div>
+                </div>
+            </a>
+            <a class="aCard" href="#">
+                <div class="card">
+                    <div class="card-image card-3"></div>
+                    <div class="card-body">
+                        <h2>SQL</h2>
+                    </div>
+                </div>
+            </a>
+        </section>
+      
     </main>
 
 
@@ -60,5 +97,7 @@
         </div>
 
     </footer>
+
+
 </body>
 </html>
