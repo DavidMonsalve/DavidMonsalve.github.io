@@ -45,6 +45,7 @@ main div {
     height: 85%;
     width: 25%;
     margin: 3%;
+    text-decoration: none;
 }
 
 .card {
