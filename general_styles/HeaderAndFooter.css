@@ -317,3 +317,124 @@
 }
 
 /*                                                                  RESPONSIVE DEGIGN                                                                                           */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                                                                  RESPONSIVE DEGIGN      (615 WIDTH)                                                                                     */
+
+@media (max-width: 615px) {
+    main div{
+        background-color: orange;
+    }
+
+    /*footer*/
+    #pie{
+        height: 30vh;
+    }
+
+    #pie #socialmedia{
+        position: absolute;
+        margin-top: 5%;
+    }
+    
+    #pie #socialmedia ul #logocontact{
+        margin: 5%;
+        font-size: 25px;
+    }
+
+    #pie #linksFooter{
+        position: absolute;
+        margin-top: 20%;
+        margin-left: 0%;
+    }
+
+    #pie #copyright{
+        margin-top: 40%;        
+    }
+    /*footer*/ 
+}
+
+@media (max-width: 600px) {
+    #cabecera #logo {
+        margin-left: 15%;
+        width: 30%;
+    }
+
+    .cabeceraBotones{
+        height: 100%;
+        margin-top: 65%;
+        margin-left: 47%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    #cabecera #logo {
+        margin-left: 15%;
+        width: 30%;
+    }
+
+    .cabeceraBotones{
+        height: 100%;
+        margin-top: 75%;
+        margin-left: 47%;
+    }
+}
+
+@media (max-width: 410px) {
+    #cabecera #logo {
+        margin-left: 15%;
+        width: 30%;
+    }
+
+    .cabeceraBotones{
+        height: 100%;
+        margin-top: 90%;
+        margin-left: 47%;
+    }
+}
+
+
+@media (max-width: 360px) {
+    #cabecera #logo {
+        margin-left: 15%;
+        width: 30%;
+    }
+
+    .cabeceraBotones{
+        height: 100%;
+        margin-top: 90%;
+        margin-left: 47%;
+    }
+}
+/*                                                                  RESPONSIVE DEGIGN                                                                                           */
+
+
+
+
+
+
+
+
+
+
+
+
+

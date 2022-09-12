@@ -279,6 +279,41 @@ a:hover{
 }
 
 
+@media (max-width: 615px) {
+    main{
+        height: 180vh;
+    }
+    .card a .card-body h2{
+        margin-left: 35%;
+        margin-top: -30%;
+    }
+}
 
+@media (max-width: 480px) {
+    main{
+        height: 200vh;
+    }
+    .card a .card-body h2{
+        margin-left: 32%;
+        margin-top: -40%;
+    }
+
+    .card a .card-body p{
+        height: 40%;
+        width: 100%;
+        margin-left: 15%;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 360px) {
+    main{
+        height: 210vh;
+    }
+    .card a .card-body h2{
+        margin-left: 30%;
+        margin-top: -40%;
+    }
+}
 
 /*                                                                          RESPONSIVE DESIGN                                                                                        */
