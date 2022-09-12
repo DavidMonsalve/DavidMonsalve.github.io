@@ -337,7 +337,7 @@ a:hover{
         width: 90%;
     }
     .acard{
-        height: 30%;
+        height: 35%;
         margin-top: 5%;
     }
 
@@ -359,9 +359,32 @@ a:hover{
         text-align: center;
     }
 
-    .acard .card .card-body h2{
+    .acard .card .card-1-text h2{
         margin-top: -25%;
-        margin-left: 0%;
+    }
+
+    .acard .card .card-1-text p{
+        margin-top: 10%;
+    }
+
+
+
+    .acard .card .card-2-text h2{
+        margin-top: -25%;
+    }
+
+    .acard .card .card-2-text p{
+        margin-top: 10%;
+    }
+
+
+
+    .acard .card .card-3-text h2{
+        margin-top: -18%;
+    }
+
+    .acard .card .card-3-text p{
+        margin-top: 10%;
     }
 }
 
@@ -371,7 +394,7 @@ a:hover{
     }
 
     .acard .card .card-body h2{
-        margin-top: -28%;
+        margin-top: -40%;
     }
     .acard .card .card-body p{
         margin-top: 10%;
