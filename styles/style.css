@@ -38,20 +38,21 @@ main div {
     position: relative;
     z-index: 1;
 
-    border-radius: 1%;
+    border-radius: 0%;
+}
+
+.acard{
+    height: 85%;
+    width: 25%;
+    margin: 3%;
 }
 
 .card {
     flex-wrap: wrap;
-    width: 25%;
-    height: 85%;
-    background: white;
-
-    
-    margin: 3%;
-
+    width: 100%;
+    height: 100%;
+    background-color: black;
     transition:.8s;
-
 }
 
 .card:hover {
@@ -62,7 +63,7 @@ main div {
     color:red;
 }
 
-.card:hover a .card-body p{
+.card:hover .acard .card-body p{
     font-family: monospace;
 }
 
@@ -76,7 +77,7 @@ main div {
 
 .card-body{
     height: 55%;
-    background: white;
+    background-color: black;
     display: inline-block;
     
 }
@@ -85,15 +86,17 @@ main div {
     font-size: 30px;
     font-family: monospace;
     text-align: center;
-    color: green;
-    margin-left: 25%;
-    margin-top: 8%;
+    color: yellow;
+    margin-left: 0%;
+    margin-top: 5%;
 }
 
 .card p{
     margin-top: 10%;
+    margin-left: 0%;
     font-family: monospace;
-    color: black;
+    color: white;
+    font-size: 14px;
 }
 
 
@@ -113,13 +116,6 @@ main div {
 }
 
 
-.card a .card-body p{
-    text-decoration-color: black;
-    margin-left: 35%;
-    font-size: 14px;
-
-}
-
 a:active{
     color: black;
 }
@@ -137,8 +133,11 @@ a:hover{
 
 @media (max-width: 1445px) {
 
+    main{
+        height: 150vh;
+    }
     main div {
-        height: 85%;
+        height: 90%;
         width: 75%;
         background: rgb(34, 34, 34);
     
@@ -149,52 +148,54 @@ a:hover{
         position: relative;
         z-index: 1;
     
-        border-radius: 1%;
+        border-radius: 0%;
 
         flex-direction: column;
     }
 
 
-    .card {
+    .acard{
+        width: 94%;
+        height: 30%;
         display: flex;
         flex-direction: row;
-        width: 94%;
-        height: 25%;
-        background: white;
+        margin-top: 10%;
+        
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+        background-color: black;
         
         transition:.8s;
     }
 
-    .card a{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
 
     
-    a .card-image{
+    .acard .card-image{
         height: 100%;
-        width: 50%;
+        width: 38%;
 
         background-size: cover;
+        background-repeat: round;
     }
 
     .card-body{
         height: 100%;
+        width: 50%;
 
-        background: white;
+        background-color: black;
         display: flex;
         flex-direction: column;
 
     }
 
-    .card a .card-body h2{
+    .acard .card .card-body h2{
         margin: 1%;
         padding: 0%;
     }
 
-    .card a .card-body p{
+    .acard .card .card-body p{
         margin: 5%;
         padding: 0%;
     }
@@ -208,12 +209,17 @@ a:hover{
 
     main{
         height: 150vh;
+        background-color: gray;
+    }
+
+    main video{
+        display: none;
     }
 
     main div {
         height: 90%;
         width: 75%;
-        border-radius: 1%;
+        border-radius: 0%;
         
         background: rgb(34, 34, 34);
         position: relative;
@@ -230,89 +236,134 @@ a:hover{
     }
 
 
-    .card {
-        display: flex;
-        flex-direction: row;
+    .acard{
         width: 94%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        
+    }
+    .card {
+        width: 100%;
         height: 100%;
-        background: white;
+        background-color: black;
         
         transition:.8s;
     }
 
-    .card a{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
     
-    a .card-image{
+    .acard .card-image{
         height: 100%;
-        width: 100%;
+        width: 38%;
 
         background-size: cover;
     }
 
     .card-body{
-        height: 100%;
+        height: 48%;
 
-        background: white;
+        background-color: black;
         display: flex;
         flex-direction: column;
 
     }
 
-    .card a .card-body h2{
+    .acard .card .card-body h2{
         margin-left: 25%;
         padding: 0%;
     }
 
-    .card a .card-body p{
-        height: 40%;
-        width: 100%;
-        margin-left: 15%;
-        padding: 0%;
-    }
+
 
 }
 
 
 @media (max-width: 615px) {
     main{
-        height: 180vh;
+        height: 200vh;
     }
-    .card a .card-body h2{
-        margin-left: 35%;
-        margin-top: -30%;
+
+    
+
+    .acard{
+        width: 94%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25%;
+        
     }
+    .card {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        transition:.8s;
+    }
+
+    
+    .acard .card-image{
+        height: 50%;
+        width: 100%;
+
+        background-size: cover;
+        background-repeat: round;
+    }
+
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 40%;
+    }
+
+    .acard .card .card-body h2{
+        margin: 0%;
+    }
+
+  
 }
 
 @media (max-width: 480px) {
     main{
-        height: 200vh;
+        height: 160vh;
     }
-    .card a .card-body h2{
-        margin-left: 32%;
-        margin-top: -40%;
+    main div{
+        height: 90%;
+        width: 90%;
+    }
+    .acard{
+        height: 30%;
+        margin-top: 5%;
     }
 
-    .card a .card-body p{
+    .card{
+        height: 100%;
+        background-color: black;
+    }
+
+    .acard .card-image{
+        height: 40%;
+    }
+
+    .acard .card-body{
         height: 40%;
         width: 100%;
-        margin-left: 15%;
-        padding: 0%;
+        background-color: black;
+
+        padding-top: 20%;
+    }
+
+    .acard .card .card-body h2{
+        margin-top: -40%;
     }
 }
 
 @media (max-width: 360px) {
     main{
         height: 210vh;
-    }
-    .card a .card-body h2{
-        margin-left: 30%;
-        margin-top: -40%;
     }
 }
 
