@@ -1,6 +1,9 @@
 /*                                                                              HEADER                                                                                                  */
 
 
+
+
+
 #cabecera {
     background: black;
     height: 15vh;
@@ -80,19 +83,17 @@
 }
 
 
-
-
 /*hamburguer menu*/
-
 .toggle-button{
     position: absolute;
     top: .75rem;
     right: 1rem;
-    display: flex;
+    display: none ;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
+    
 }
 
 .toggle-button .bar{
@@ -102,20 +103,20 @@
     border-radius: 10px;
 
 }
-
 /*hamburguer menu*/
 
-
-
-
-
-
-
-
-
-
-
 /*                                                                              HEADER                                                                                                  */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -240,8 +241,12 @@
 /*                                                                  RESPONSIVE DEGIGN                                                                                           */
 
 @media (max-width: 800px) {
+
+
     .toggle-button{
         display: flex;
+        top: 50%;
+        right: 15%;
     }
     
     #cabecera{
@@ -250,11 +255,22 @@
         position: relative;
     }
 
+    #cabecera #logo {
+        margin-left: 15%;
+        width: 20%;
+        height: 100%;
+        background: blue;
+    }
+    #cabecera #logo #imagen_logo {
+        height: 100%;
+        width: 100%;
+    }
+
     .cabeceraBotones{
-        /*display: none;*/
+        display: none;
         height: 100%;
         position: absolute;
-        margin-top: 60%;
+        margin-top: 55%;
         margin-left: 47%;
         z-index: 2;
         flex-direction: column;
@@ -275,6 +291,29 @@
         z-index: 2;
 
     }
+
+
+
+    /*footer*/
+    #pie #socialmedia{
+        position: absolute;
+        margin-top: 5%;
+    }
+    
+    #pie #socialmedia ul #logocontact{
+        margin: 5%;
+        font-size: 25px;
+    }
+
+    #pie #linksFooter{
+        position: absolute;
+        margin-top: 14%;
+    }
+
+    #pie #copyright{
+        margin-top: 25%;        
+    }
+
 }
 
 /*                                                                  RESPONSIVE DEGIGN                                                                                           */
