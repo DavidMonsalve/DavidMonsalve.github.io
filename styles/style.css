@@ -630,9 +630,14 @@ a:hover{
         margin-left: 0%;
     }
 
+    .botonClass button{
+        width: 60%;
+        height: 40%;
+    }
+
 
     .containerS{
-        height: 170vh;
+        height: 220vh;
         width: 100%;
     
         position: relative;
