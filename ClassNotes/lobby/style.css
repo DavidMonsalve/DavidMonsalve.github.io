@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+}
+
+main{
+    height: 130vh;
+    width: 100%;
+    background-color: gray;
+}
+
+.intro{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-1{
+    height: 10%;
+    width: 90%;
+    margin-top: 2%;
+    background-color: rgb(30, 107, 170);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: monospace;
+}
+
+.cuerpo-1{
+    height: 75%;
+    width: 90%;
+    margin: 2%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.columna{
+    height: 33.33%;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cuatri{
+    height: 100%;
+    width: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid white;
+    color: white;
+
+}
+.cuatri h2{
+    font-size: 24px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.materias{
+    height: 100%;
+    width: 90%;
+    background-color: black;
+    border:1px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.c2 .cuatri{
+    background-color: black;
+}
+.c3 .cuatri{
+    background-color: black;
+}
+
+
+.card{
+    height: 80%;
+    width: 20%;
+    background-color: rgb(32, 32, 32);
+    margin: 2%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cardImage{
+    height: 55%;
+    width: 80%;
+    margin: 4%;
+    background-color: blue;
+}
+
+.cardPeriodo p{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+.cardBoton{
+    margin-top: 5%;
+    width: 100%;
+}
+
+.cardBody button{
+    margin-bottom: 5%;
+    width: 100%;
+    background-color: slategrey;
+    font-size: 16px;
+    color: black;
+}
+
+.cardTitulo h2{
+    color: rgb(175, 0, 0);
+    font-size: 24px;
+    margin-top: 5%;
+}
+.card:hover h2{
+    color: coral;
+}
+
+.card-1-1{
+    background-image: url(/ClassNotes/lobby/img/firstSemester/a.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-2-2{
+    background-image: url(/ClassNotes/lobby/img/firstSemester/b.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-3-3{
+    background-image: url(/ClassNotes/lobby/img/firstSemester/c.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-4-4{
+    background-image: url(/ClassNotes/lobby/img/firstSemester/d.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-5-5{
+    background-image: url(/ClassNotes/lobby/img/secondSemester/a.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-6-6{
+    background-image: url(/ClassNotes/lobby/img/secondSemester/b.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-7-7{
+    background-image: url(/ClassNotes/lobby/img/secondSemester/c.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-8-8{
+    background-image: url(/ClassNotes/lobby/img/secondSemester/d.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-9-9{
+    background-image: url(/ClassNotes/lobby/img/ThirdSmester/a.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-10-10{
+    background-image: url(/ClassNotes/lobby/img/ThirdSmester/b.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-11-11{
+    background-image: url(/ClassNotes/lobby/img/ThirdSmester/c.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+.card-12-12{
+    background-image: url(/ClassNotes/lobby/img/ThirdSmester/d.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
