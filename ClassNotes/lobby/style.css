@@ -201,3 +201,41 @@ main{
     background-size: cover;
     background-repeat: round;
 }
+
+
+@media(max-width:1200px){
+    main{
+        height: 150vh;
+    }
+    .columna{
+        flex-direction: column;
+    }
+    .cuatri{
+        height: 20%;
+        width: 100%;
+    }
+    .materias{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media(max-width: 740px){
+    main{
+        height: 280vh;
+
+    }
+    .materias{
+        height: 100%;
+        flex-direction: column;
+    }
+    .card{
+        justify-content: center;
+        width: 60%;
+    }
+
+    .cardImage{
+        
+        display: none;
+    }
+}
