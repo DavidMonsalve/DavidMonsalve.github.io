@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+li{
+    font-size: 16px;
+}
+
+main{
+    height: 600vh;
+    width: 100%;
+    background-color: grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centralizador{
+    height: 90%;
+    width: 80%;
+    background-color: darkblue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    height: 2%;
+    width:  100%;
+    background-color: yellow;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desarrollo{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+
+    display: flex;
+    justify-content: center;
+    }
+
+.desarrollo-1{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+
+    color: white;
+    padding: 5%;
+}
+.desarrollo-1 .primeraPregunta{
+    text-align: center;
+    padding: 0%;
+    margin-top: 0%;
+}
+
+.desarrollo-1 .PP-1{
+    text-align: center;
+    padding-top: 2%;
+}
+
+
+/*FOTO 1 Y primer instancia de objetivos*/ 
+.objetivos{
+    width: 100%;
+    height: 5%;
+    padding-top: 2%;
+    /*background-color: red;*/
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.objetivos-text{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+
+}
+
+.objetivos-image{
+    height: 80%;
+    width: 35%;
+    background-color: rebeccapurple;
+    background-image: url(img/foto1.png);
+    background-size: cover;
+    background-repeat: round;
+}
+
+
+
+
+.parrafos{
+    width: 80%;
+}
+
+.desarrollo-1 h2{
+    margin-top: 3%;
+}
+.desarrollo-1 p{
+    margin-top: 3%;
+    font-size: 18px;
+}
+.desarrollo-1 ul{
+    padding-left: 5%;
+}
+
+.objeListH3{
+    padding-top: 3%;
+}
+
+.separador{
+    height: 3%;
+    width: 100%;
+}
+
+
+/*generaciones*/
+.lineaGen{
+    height: 10%;
+    width: 100%;
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.genTitle{
+    height: 20%;
+    width: 50%;
+    margin-left: 2%;
+    color: red;
+
+    font-size: 18px;
+}
+
+.genTimeLine{
+    height: 18%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.genTimeLineFoto{
+    height: 100%;
+    width: 50%;
+    background-image: url(img/generaciones/cero.png);
+    background-size: cover;
+    background-repeat: round;
+}
+
+.genCuerpo{
+    height: 75%;
+    width: 100%;
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.genText{
+    width: 75%;
+    margin-top: 2%;
+}
+
+.genPic{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.genPicPic{
+    height: 100%;
+    width: 100%;
+    background-image: url(img/generaciones/zero.jpg.crdownload);
+    background-size: cover;
+    background-repeat: round;
+}

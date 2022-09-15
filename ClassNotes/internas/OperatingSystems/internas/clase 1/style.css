@@ -113,6 +113,7 @@ main{
 .singularidad-image{
     height: 90%;
     width: 30%;
+    margin-top: 3%;
     background-color: red;
     background-image: url(img/singularidad.jpg);
     background-size: cover;

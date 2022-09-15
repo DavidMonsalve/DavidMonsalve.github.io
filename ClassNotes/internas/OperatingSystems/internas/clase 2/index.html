@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+    <main>
+        <div class="centralizador">
+            <div class="banner">
+                <h1>Clase 2</h1>
+            </div>
+            <div class="desarrollo">
+                <div class="desarrollo-1">
+                    <h2 class="primeraPregunta">Estructura y Funcionamiento de una Computadora</h2>
+                    <p class="primeraPregunta PP-1">Desde la abstracto, la computadora es una maquina destinada a procesar datos, esto involucra <br>
+                        dos flujos de informacion entrante y uno saliente: 
+                    </p>
+
+                    <div class="objetivos">
+                        <div class="objetivos-text">
+                            
+                            <p>
+                                Para llevar a cabo la funcion de procesamiento, una computadora con arquitectura Von Neumann esta
+                                compuesta por cuatro componentes basicos.
+                            </p>
+                        </div>
+
+                        <div class="objetivos-image"></div>
+                    </div>
+
+                    <h2>Componentes Básicos del Procesamiento en la arquitectura Von Neumann</h2>
+                    <p>1)  La <span style="color: red;">Memoria Principal</span>, quien esta compuesta por memoria RAM y memoria ROM.</p> <br>
+                    <ul>
+                        <li>En ella residen los datos a procesar, el codigo máquina del programa a ejecutar y los resultados</li> <br>
+                        <li>El direccionamiento se realiza a nivel de byte, es decir, que las direcciones 0, 1, 2... identifiquen a los
+                            bytes 0, 1, 2,... <br>
+                            sin embargo el, el acceso es a nivel de palabra, normalmente varios bytes, <br> (en la actualidad tipicamente 4 bytes, 8 bytes
+                            o 16 bytes) cuyo primer bite se situa en la direccion referenciada.
+                        </li>
+                    </ul>
+
+                    <p>2)  La <span style="color: red;">Unidad Aritmetico Logica</span> </p> <br>
+                    <ul>
+                        <li>Realiza operaciones aritmeticas y logicas sobre uno o dos operandos.</li> <br> 
+                        <li>Esta unidad obtiene los datos para su operacion <span style="font-weight: bold;">directamente de memoria principal</span> <br>
+                        o del <span style="font-weight: bold;">conjunto de registros de la CPU.</span></li> <br>
+                        <li>Los resultados se almacenan <span style="font-weight: bold;">directamente en la memoria principal</span> <br>
+                            o en el <span style="font-weight: bold;">conjunto de registros de la CPU.</span>
+
+                        </li>
+                    </ul>
+
+                    <p>3) La <span style="color: red;">Unidad de Control</span></p> <br>
+                    <ul>
+                        <li>Se encarga de hacer funcionar al conjunto.</li><br>
+                        <li>Para lo cual realiza las siguientes funciones (ciclo de instrucción): 
+                            <ul> <br>
+                                <li>Lee de memoria las instrucciones maquina que forman al programa.</li>
+                                <li>Interpreta (decodifica) cada instruccion leida.</li>                                
+                                <li>Lee los datos de memoria referenciados por cada instruccion.</li>                                
+                                <li>Ejecuta cada instruccion.</li>                                
+                                <li>Almacena el resultado de cada instrucción.</li>                                
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>4) La <span style="color: red;">Unidad de Entrada/Salida (E/S)</span></p> <br>
+                    <ul>
+                        <li>Se encarga de hacer la transferencia de informacion entre la memoria principal
+                            (o los registros) <br> y los periféricos.
+                        </li> <br>
+                        <li>La entrada/salida se puede hacer bajo el gobierno de la unidad de control (E/S programada) <br>
+                        o de forma independiente (DMA).</li>
+                    </ul>
+
+                    <p>Desde el punto de vista de los SO denominamos procesador, o unidad central de procesamiento (CPU), al <br>
+                    conjunto de la <span style="font-weight: bold;">unidad aritmetico logica</span> y la <span style="font-weight: bold;">unidad de control</span>.</p>
+
+                    <div class="separador"></div>
+
+                    <h2 style="text-align: center; padding-bottom: 2%;">Evolución de los Sistemas Operativos</h2>
+                    <ul style="display:flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; list-style: none">
+                        <li>Para ver qué son los SO conviene ver como se han desarrollado a lo largo de los años.</li> <br>
+                        <li>Al realizar esto podemos identificar cuáles son los elementos comunes de los SO y ver cómo <br>
+                             y por qué estos sistemas se han desarrollado como lo han hecho. </li> <br>
+                        <li>Los SO y la arquitectura de los computadores han tenido gran influencia recíproca.</li>
+                    </ul>
+
+                    <div class="lineaGen gen1">
+                        <div class="genTitle">
+                            <h3>Generacion cero</h3>
+                        </div>
+                        <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
+                        <div class="genCuerpo">
+                            <div class="genText">
+                                <ul>
+                                    <li>No existe el concepto de sistema operativo.</li> <br>
+                                    <li>Existe el concepto de programa.</li> <br>
+                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                </ul>
+                            </div>
+                            <div class="genPic"><div class="genPicPic"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="lineaGen gen1">
+                        <div class="genTitle">
+                            <h3>Primera Generacion</h3>
+                        </div>
+                        <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
+                        <div class="genCuerpo">
+                            <div class="genText">
+                                <ul>
+                                    <li>No existe el concepto de sistema operativo.</li> <br>
+                                    <li>Existe el concepto de programa.</li> <br>
+                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                </ul>
+                            </div>
+                            <div class="genPic"><div class="genPicPic"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="lineaGen gen1">
+                        <div class="genTitle">
+                            <h3>Segunda Generacion</h3>
+                        </div>
+                        <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
+                        <div class="genCuerpo">
+                            <div class="genText">
+                                <ul>
+                                    <li>No existe el concepto de sistema operativo.</li> <br>
+                                    <li>Existe el concepto de programa.</li> <br>
+                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                </ul>
+                            </div>
+                            <div class="genPic"><div class="genPicPic"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="lineaGen gen1">
+                        <div class="genTitle">
+                            <h3>Tercera Generacion</h3>
+                        </div>
+                        <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
+                        <div class="genCuerpo">
+                            <div class="genText">
+                                <ul>
+                                    <li>No existe el concepto de sistema operativo.</li> <br>
+                                    <li>Existe el concepto de programa.</li> <br>
+                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                </ul>
+                            </div>
+                            <div class="genPic"><div class="genPicPic"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="lineaGen gen1">
+                        <div class="genTitle">
+                            <h3>Cuarta Generacion</h3>
+                        </div>
+                        <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
+                        <div class="genCuerpo">
+                            <div class="genText">
+                                <ul>
+                                    <li>No existe el concepto de sistema operativo.</li> <br>
+                                    <li>Existe el concepto de programa.</li> <br>
+                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                </ul>
+                            </div>
+                            <div class="genPic"><div class="genPicPic"></div></div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>
