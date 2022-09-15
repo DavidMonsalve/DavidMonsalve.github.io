@@ -221,9 +221,16 @@ main{
 }
 
 @media(max-width: 740px){
-    main{
-        height: 280vh;
 
+    main{
+        height: 200vh;
+
+    }
+    .cuerpo-1{
+        height: 90%;
+    }
+    .banner-1{
+        height: 5%;
     }
     .materias{
         height: 100%;
@@ -237,5 +244,12 @@ main{
     .cardImage{
         
         display: none;
+    }
+}
+
+
+@media(max-width: 375px){
+    main{
+        height: 250vh;
     }
 }
