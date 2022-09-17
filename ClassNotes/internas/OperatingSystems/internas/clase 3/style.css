@@ -83,3 +83,15 @@ main{
 .foto3{
     height: 5%;
 }
+
+.fotoTablas{
+    height: 4%;
+}
+
+.fotoSuspencion{
+    height: 4%;
+}
+.fotoSuspencion img{
+    height: 100%;
+    width: 50%;
+}

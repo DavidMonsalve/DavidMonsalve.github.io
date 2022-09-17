@@ -56,6 +56,7 @@
                         <ul style="margin-top: 2%; margin-left: 4%;">
                             <li>la identidad del proceso, es decir, quien es el proceso.</li>
                             <li>quienes son los procesos originadores de ese proceso</li>
+                            <li>El puntero de pila, que indica donde esta el comienzo del espacio de memoria donde se encuentra dicho proceso.</li>
                             <li>entre otros...</li>
                         </ul>
                     <p>El SO mantiene una tabla de procesos con todos los BCP de todos los procesos.</p>
@@ -133,15 +134,108 @@
 
                          Usan una estructura de pila residente en memoria por intermedio del puntero de pila o stack-pointer. Es una estructura dinamica durante la
                          ejectucion del proceso.
+                         <div class="foto"><img src="img/pila.png" alt=""></div>
+
 
                         <br><br>
                         
-                        <span style="color: cyan;">4) Proceso con un numero variable de segmentos de tamaño variable:</span> 
- 
+                        <span style="color: cyan;">4) Proceso con un numero variable de segmentos de tamaño variable:</span> Es el mas avanzado. Permite que
+                        existan los segmentos desde el proceso. Genera un mayor gasto de administracion. Optimiza el espacio de memoria.
+                        <div class="foto"><img src="img/segAvan.png" alt=""></div>
                     </p>
 
                     <h3 style="color: burlywood;">Tablas del sistema operativo</h3>  
-                    <div class="foto foto3"><img src="img/tablas.png" alt=""></div>
+                    <p>Como se puede ver en la siguiente imagen, las tablas de los Sistemas Operativos contienen las tablas de los procesos
+                        y estas ultimas, a su vez, contienen los BCP. Por otra parte, las tablas de los SO, tambien contienen las tablas de memoria, de E/S y de archivos.
+                        
+                        <br><br>
+                    
+                        En las tablas de los SO, la informacion ASOCIADA a los procesos se encuentra en parte dentro de los BCP y en parte fuera de ellos. Por dar un ejemplo,
+                        las tablas de entrada/salida, estan fuera del BCP, esas no se guardan. Si bien estan asociadas al proceso ¿quien las asocia? El SO. No viene asociado.
+                        Está por fuera del BCP pero si tiene el BCP la identificación del proceso. El originador del proceso tambien esta dentro del BCP y el puntero de pila,
+                        quien indica donde comienza ese proceso en la memoria principal. En fin, parte de la informacion del proceso esta dentro del BCP y parte fuera.
+
+                        <br><br>
+
+                        Esto se define en funcion de los siguientes argumentos:
+
+                        <br><br>
+
+                        1) Eficiencia: Acelerar los accesos. 
+
+                            La tabla de procesos, es en general una estructura estatica, que contiene varios BCP del mismo tamaño. La informacion <br>
+                            de tamaño variable no debe ser incluida en el BCP. Por ejemplo: La tabla de paginas, su tamaño depende de las necesidades <br>
+                            de memoria de los procesos. Por lo que el BCP incluirá el RIED (Registro Identificador de Espacio de Direccionamiento).
+
+                        <br><br>
+
+                        2) Compartir informacion:
+
+                            Cuando la informacion ha de ser compartida por varios procesos, no puede residir en el BCP. Por ejemplo, Dos procesos pueden tener <br>
+                            simultaneamente abierto el mismo archivo por dos razones: Que el archivo se heredo de un proceso progenitor o que el archivo <br>
+                            se abrio de forma independiente por los dos procesos. Al tratarse de procesos que estan diseñados para compartir el archivo, <br>
+                            lo mas conviniente es que compartan el puntero de posicion (PP).                    
+                    </p>
+                    <div class="foto fotoTablas"><img src="img/tablas.png" alt=""></div>
+
+                    <h2 style="text-align: center; margin-top: 10%;">Informacion del BCP</h2>
+                    <p>El BCP contiene información basica del proceso: <br><br>
+                        <ul style="margin-left: 4%;">
+                            <li>Identificador del proceso</li>
+                            <li>Identificador del proceso padre, si lo hay.</li>
+                            <li>Informacion sobre el usuario (identificador de usuario, identificador de grupo)</li>
+                        </ul>
+                        
+                        <br><br>
+
+                        Estado del procesador: Valores iniciales del estado del procesador o su valor al instante en el que fue interrumpido.
+
+                        <br><br>
+
+                        Informacion de control del proceso: Informacion que permite gestionar al proceso.
+
+                        <br><br>
+
+                        Informacion de planificacion y estado: 
+                    </p>
+
+                    <h2 style="text-align: center; margin-top: 10%;">Formacion de un Proceso</h2>
+                    <p>Consiste en completar todas las informaciones que lo constituyen, para esto el Sistema Operativo, debe:
+                        <br><br>
+                        Asignar un espacio de memoria para albergar la imagen de memoria, luego, seleccionar un BCP libre de la tabla de procesos. 
+                        Rellenar el BCP con toda la informacion de identificacion del proceso. Despues, debe cargar en el "segmento codigo" el codigo 
+                        mas las rutinas de sistemas y en el segmento de datos los datos iniciales contenidos en el archivo objeto. Una vez hecho todo esto 
+                        se crea en el segmento de pila, la pila inicial del proceso. La pila, incluye el entorno del proceso  y los parametros que se 
+                        pasan en la invocacion del programa correspondiente. Una vez realizado esto, se puede marcar como listo para ejecutar, de forma 
+                        que el planificador lo seleccione para su ejecucion.
+                    </p>
+                    <div class="foto fotoTablas"><img src="img/a.jpg" alt=""></div>
+
+                    <h2 style="text-align: center; margin-top: 10%;">Estados de un proceso</h2>
+                    <p>Un proceso puede estar BASICAMENTE en tres estados: ejecutando, bloqueado y listo. Cuando lo creamos, esta en listo, cuando lo mandamos a ejecutar, 
+                         esta en ejecutando. Y si estaba ejecutando y paso algo, se bloquea.
+                        <br><br>
+
+                        Se dice que un proceso esta listo cuando puede entrar en fase de procesamiento. Puede haber varios procesos en 
+                        este estado, es tarea de SO (modulo Planificador) seleccionar a aquel que deba pasar a ejecucion.
+
+                        <br><br>
+
+                        Cuando esta en ejecucion, el estado del proceso reside en los registros del procesador. Bloqueado reside en el BCP, al igual que cuando
+                        esta listo.
+                </p>
+                <div class="foto fotoTablas"><img src="img/estadosProceso.jpg" alt=""></div>
+
+                <p>Para disminuir el grado de multiprogramación efectivo, el SO puede suspender algunos procesos, lo que implica que les retira
+                    todos sus marcos de paginas, dejandolos enteramente en la zona de intercambios.
+
+                    <br><br>
+
+                    El objetivo de la suspencion estriba en dejar suficiente memoria a los procesos no suspendidos para que su conjunto residente tenga un 
+                    tamaño adecuado que evite la hiperpaginacion.
+                </p>
+                <div class="foto fotoSuspencion"><img src="img/suspencion.jpg" alt=""></div>
+
                 </div>
             </div>
             
