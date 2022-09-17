@@ -35,95 +35,118 @@
     <main>
         <div class="centralizador">
             <div class="banner">
-                <h1>Clase 1: Introducción a la Materia</h1>
+                <h1>Clase 3: Procesos e hilos.</h1>
             </div>
             <div class="desarrollo">
-                <div class="desarrollo-1">
-                    <h2 class="primeraPregunta">¿Qué es un Sistema Operativo?</h2>
-                    <p class="primeraPregunta PP-1">Es un software que se encarga de gestionar todos los recursos del sistema permitiendo asi la comunicacion entre el usuario y el ordenador. <br> 
-                        Su propósito es ofrecer un ambiente en el cual el usuario pueda ejecutar programas.</p>
-
-                    <div class="objetivos">
-                        <div class="objetivos-text">
-                            <h2>Objetivos</h2>
-                            
-                            <p>
-                                1) Hacer que el sistema de computo se pueda usar de forma comoda. 
-                                <br>
-                                <br>
-                                2) Usar el hardware de la computadora de forma eficiente.
-                            </p>
-                        </div>
-
-                        <div class="objetivos-image"></div>
-                    </div>
-
-                    <h2>Funciones básicas del Sistema Operativo</h2>
-                    <p>Es <span style="color: red;">"asignador"</span> de recursos de hardware y software. Asigna: </p> <br>
-                    <ul>
-                        <li>Tiempo de CPU.</li> 
-                        <li>Espacio de memoria.</li>
-                        <li>Espacio de almacenamiento para archivos.</li>
-                        <li>Dispositivos de E/S.</li>
-                        <li>Se encarga de detección y respuesta a errores.</li>
-                        <li>Protección.</li>
-                    </ul>
-
-                    <p>Es un <span style="color: red;">"administrador"</span> de recursos de hardware y software.</p> <br>
-                    <ul>
-                        <li>Asignandolos a programas y usuarios especificos segun demanda.</li> 
-                        <li>Resuelve conficlos entre solicitudes de recursos, de manera que el sistema de computo opere de manera justa y eficiente.</li>
-                    </ul>
-
-                    <p>Es un <span style="color: red;">"programa de control"</span>.</p> <br>
-                    <ul>
-                        <li>Se ocupa especialmente de la operacion y control de dispositivos de E/S.</li> 
-                        <li>Controla la ejecucion de los programas.</li>
-                    </ul>
-
-                    <h2>Objetivos (mas detallados) de los Sistemas Operativos</h2>
-                    <ul>
-                        <li>
-                            <h3 class="objeListH3">Facilidad de Uso</h3>
-                            <p>Forma en que facilita el SO en el uso del sistema, ya sea tanto la parte de hardawre como software. </p>
-                        </li>
-                        <li>
-                            <h3 class="objeListH3">Eficiencia</h3>
-                            <p>Los recursos han de aprovecharse eficientemente. El SO no debe suponer una gran sobrecarga.</p>
-                        </li>
-                        <li>
-                            <h3 class="objeListH3">Capacidad para evolucionar</h3>
-                            <p>Construido de modo que permita una evolución para incorporar nuevas funcionalidades en el futuro.
-                            <br> Los motivos para la evolucion de los SO son los nuevos tipos de hardware y las actulizaciones del mismo, 
-                            <br>inclusion de nuevos servicios, ya que las necesidades de los clientes van mutando con el pasar del tiempo, 
-                            <br>y resolver errores (o bugs) encontrados en el código.</p>
-                        </li>
-                    </ul>
-
-                    <div class="singularidad">
-                        <div class="singularidad-image"></div>
-                        <div class="singularidad-text">
-                            <h2>Singularidad</h2>
-                            <div class="parrafos">
-                                <p>La singularidad es una caracteristica fundamental del sistema operativo. El sistema operativo no tiene un control externo.
-                                Se autocontrola. Esto es lo contrario a lo que pasa con las aplicaciones, estas, son controladas por el SO, quien decide cuando se
-                                van a ejecutar, durante cuanto tiempo, etc.</p>
-                                
-                                <p>El sistema operativo cuando cuando carga un programa para ejecutar le asigna los recursos necesarios y
-                                le entrega el control de todo lo que el maneja. Cuando el programa termina le devuelve el control al SO, pero ese tiempo
-                            y esos recursos se los asigna el SO, este le dice cuanto tiempo se va a ejecutar, donde se va a almacenar, cuanto tiempo va a
-                        pasar en memoria, etc.</p>
-
-                            </div>
-                        </div>
-                    </div>
+                <div class="desarrollo-1">           
+                    <h2>Trabajos (jobs)</h2>
+                    <p>Conjunto de tareas que realiza una computadora, varía de acuerdo a la generacion a la que nos referimos.
+                        En 2da generacion equivale a un lote, en 3era y 4ta a un conjunto de procesos con un objetivo determinado.
+                    </p>   
+                    <h2>Threads, hilos, o procesos ligeros.</h2>
+                    <p>Un hilo no es mas que los <span style="color: red;">componentes de un proceso</span> que se pueden ejecutar independientemente.</p>      
+                    <h2>Concepto de proceso.</h2>
+                    <p>Un proceso es un <span style="color: red;">programa en ejecucion</span>. Para ser ejecutado debe estar junto a sus datos en la memoria principal.
+                        Para cada proceso, el SO tiene una de estructura que permite identificar los recursos que tiene asignado, llamada BCP. Vendria siendo como una especie
+                        de cedula de identidad del proceso.
+                    </p>
+                    <div class="foto"><img src="img/jobs.png" alt=""></div>
+                    <p>EL BCP es una estructura que <span style="color: aquamarine;">guarda informacion del proceso</span> ¿para qué? para que el sistema operativo
+                    lo gestione de manera adecuada. En este bloque de control de proceso vamos a tener informacion de:
+                        <ul style="margin-top: 2%; margin-left: 4%;">
+                            <li>la identidad del proceso, es decir, quien es el proceso.</li>
+                            <li>quienes son los procesos originadores de ese proceso</li>
+                            <li>entre otros...</li>
+                        </ul>
+                    <p>El SO mantiene una tabla de procesos con todos los BCP de todos los procesos.</p>
+                    </p>
                     
+                    <h2 style="text-align: center;">Componentes de un proceso</h2>
+                    <div class="foto"><img src="img/componentes.png" alt=""></div>
+                    <h3 style="color: burlywood;">Jerarquia de procesos.</h3>
+                    <p>La secuencia de creacion de procesos genera un arbol de procesos jerarquico. Existe herencia de padres a hijos.</p>
+                    <div class="foto foto3"><img src="img/jerarquia.png" alt=""></div>
+                    
+                    <h3 style="color: burlywood;">Entorno del proceso.</h3>
+                    <p>Es el conjunto de variables que se le pasan al proceso en el momento de su creacion. Esta formado por una tabla
+                        "NOMBRE-VALOR"  que se incluye en la pila del proceso.
+                    </p>
+                    <h3 style="color: burlywood;">Grupos de procesos</h3>
+                    <p>Los procesos forman grupos que tienen diversas propiedades. Este concepto es de interes puesto que hay
+                        determinadas operaciones que se pueden aplicar a todos los procesos de un determinado grupo. Por ejemplo:
+                        matar todos los procesos de un mismo grupo.
+                    </p>
+                    
+                    
+                    <h2 style="text-align: center; margin-top: 10%;">Informacion del proceso.</h2><br>
+                    <p>La informacion que compone un proceso se organiza en tres grupos: </p>
+                    <ul style="margin-top: 2%; margin-left: 4%;">
+                        <li><span style="color: aquamarine;">Estado del procesador</span></li>
+                        <li><span style="color: aquamarine;">Imagen de memoria</span></li>
+                        <li><span style="color: aquamarine;">Tablas del sistema operativo</span></li>
+                    </ul>                    
+                    <h3 style="color: burlywood;">Estado del procesador</h3>
+                    <p style="margin-left: 4%;">Esta formado por el contenido de todos sus registros:
+                        <ul style="margin-left: 8%; margin-top: 2%;">
+                            <li>Registros generales</li>
+                            <li>Resgistros especiales</li>
+                            <li>Registros de estado</li>
+                            <li>Contador de programa</li>
+                            <li>Puntero de pila</li>
+                        </ul>
+                    </p>
+                    <p>Para cada proceso, el estado del procesador recide en:
+                         los registros del procesador (en ejecucion) o la memoria (fuera de ejecucion).
+                    </p>
 
+                    <h3 style="color: burlywood;">Imagen de memoria del proceso.</h3>
+                    <p>Es como un mapa de donde esta ubicado un proceso para ser ejecutado. <br><br>
+
+                        Esta formada por los espacios de memoria que esta autorizado a utilizar. 
+                        
+                        El proceso solamente puede tener informacion en su imagen de memoria <br> y no fuera de ella.
+                        Está referenciada a memoria virtual o fisica. Solamente tendremos marco <br>
+                         de memoria cuando tengamos gestion de memoria virtual.
+                    </p>
+
+                    <p>
+                        Hay cuatro tipos o modelos de imagenes en memoria: <br><br>
+                        
+                        <span style="color: cyan;">1) Imagen de memoria con un unico segmento de tamaño fijo:</span> Es el modelo mas sencillo. <br>
+                        Su uso se suele restringir a los sistemas sin memoria virtual (MV). El proceso recibe un unico espacio en memoria. el espacio <br>
+                        de memoria no puede variar.
+
+                        <br> <br>
+
+                        <span style="color: cyan;">2) Proceso con un unico segmento de tamaño variable: </span> Se emplea raramente. En sistemas sin <br>
+                        memoria virtual los segmentos no pueden crecer a menos que se deje espacio en memoria principal de reserva (desperdicio de memoria).
+
+                        <br><br>
+
+                        <span style="color: cyan;">3) Proceso con un numero fijo de segmentos de tamaño variable: </span> El proceso contiene codigo y datos. <br>
+                        Los datos pueden ser con y sin valor inicial ó dinamicos. Los <span style="color: red;"> datos con valor inicial </span>SON ESTATICOS y su valor se fija al cargar el proceso. <br>
+                         <span style="color: red;"> Los que no tienen valor inicial </span>tambien son estaticos pero no tiene valor asignado, el SO rellena o no con valores predefinidos esta <br>
+                         zona de datos durante el proceso de carga. <span style="color red;">Los datos dinamicos</span> se crean y se destruyen segun las indicaciones del <br>
+                         programa.
+
+                         <br><br>
+
+                         Usan una estructura de pila residente en memoria por intermedio del puntero de pila o stack-pointer. Es una estructura dinamica durante la
+                         ejectucion del proceso.
+
+                        <br><br>
+                        
+                        <span style="color: cyan;">4) Proceso con un numero variable de segmentos de tamaño variable:</span> 
+ 
+                    </p>
+
+                    <h3 style="color: burlywood;">Tablas del sistema operativo</h3>  
+                    <div class="foto foto3"><img src="img/tablas.png" alt=""></div>
                 </div>
             </div>
-
+            
         </div>
-
+        
     </main>
 
 

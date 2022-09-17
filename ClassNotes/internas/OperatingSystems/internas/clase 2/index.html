@@ -106,7 +106,7 @@
 
                     <div class="separador"></div>
 
-                    <h2 style="text-align: center; padding-bottom: 2%;">Evolución de los Sistemas Operativos</h2>
+                    <h1 style="text-align: center; padding-bottom: 2%;">Evolución de los Sistemas Operativos</h1>
                     <ul style="display:flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; list-style: none">
                         <li>Para ver qué son los SO conviene ver como se han desarrollado a lo largo de los años.</li> <br>
                         <li>Al realizar esto podemos identificar cuáles son los elementos comunes de los SO y ver cómo <br>
@@ -114,7 +114,7 @@
                         <li>Los SO y la arquitectura de los computadores han tenido gran influencia recíproca.</li>
                     </ul>
 
-                    <div class="lineaGen gen1">
+                    <div class="lineaGen gen0">
                         <div class="genTitle">
                             <h3>Generacion cero</h3>
                         </div>
@@ -133,66 +133,139 @@
 
                     <div class="lineaGen gen1">
                         <div class="genTitle">
-                            <h3>Primera Generacion</h3>
+                            <h3>Primera Generacion <br> <span style="color: white">Válvulas Termoiónicas y Procesamiento en serie</span></h3>
                         </div>
                         <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
                         <div class="genCuerpo">
                             <div class="genText">
                                 <ul>
-                                    <li>No existe el concepto de sistema operativo.</li> <br>
-                                    <li>Existe el concepto de programa.</li> <br>
-                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                    <li>No existe el concepto de SO.</li><br>
+                                    <li>El procesamiento es en serie. La CPU atiende un solo proceso por vez.</li><br>
+                                    <li>Si el proceso es una operacion de E/S, la CPU esta ociosa.</li><br>
+                                    <li>Se programa por cableado en el lenguaje de maquina. No existen lenguajes <br>
+                                    de programacion.</li><br>
+                                    <li>Instrucciones eran codificadas a mano, igual que la configuracion de E/S.</li><br>
+                                    <li>Se crean los ensambladores, cargadores (loaders), enlazadores (linkers) para <br>
+                                    agilizar el proceso de programacion.</li><br>
                                 </ul>
                             </div>
                             <div class="genPic"><div class="genPicPic"></div></div>
                         </div>
                     </div>
 
-                    <div class="lineaGen gen1">
+                    <div class="lineaGen gen2">
                         <div class="genTitle">
-                            <h3>Segunda Generacion</h3>
+                            <h3>Segunda Generacion <br> <span style="color: white">Transistores y SO por lotes.</span></h3>
                         </div>
                         <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
                         <div class="genCuerpo">
                             <div class="genText">
                                 <ul>
-                                    <li>No existe el concepto de sistema operativo.</li> <br>
-                                    <li>Existe el concepto de programa.</li> <br>
-                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                    <li>Pasos para ejecutar un programa: </li> <br>
+                                    <ul>
+                                        <li>1) Escritura del programa en lenguaje “HL” o en ensamblador. ​</li>
+                                        <li>2) Perforación/Verificación de tarjetas del programa. ​</li>
+                                        <li>3) Introducción del compilador de lenguaje “HL” en el lector de tarjetas e <br>
+                                            introducción del programa perforado. (creación del programa ejecutable). ​</li>
+                                        <li>4) Procesamiento del programa. ​</li>
+                                        <li>5) Impresión de resultados en la impresora. ​</li>
+                                    </ul><br>
+                                    <li>Los laboratorios de investigación de la “General Motors” implementaron el primer <br>
+                                         “pseudo sistema operativo”, quien: 
+                                        <ul><br>
+                                            <li>Comparte memoria con los programas. ​</li><br>
+                                            <li>Corría un trabajo a la vez y transfería automáticamente el control al trabajo siguiente</li>
+                                        </ul>
+                                    </li><br>
+                                    <li>Los sistemas operativos de los años cincuenta fueron diseñados para hacer más fluido el encadenamiento de trabajos. </li><br>
+                                    <li>Este fue el comienzo de los sistemas de procesamiento por lotes (Batch) 
+                                        <ul>
+                                            <li>Los trabajos se reunían por grupo o “lotes” (programas de usuario de necesidades similares)</li>
+                                        </ul>
+                                    </li><br>
+                                    <li>Cuando el trabajo estaba en ejecución, este tenia control total de la máquina</li><br>
+                                    <li>Al terminar cada trabajo (normal o anormalmente), el control era devuelto al pseudo SO, <br>
+                                         el cual "limpiaba" la memoria, leía e inicia el trabajo siguiente. ​</li><br>
+                                    <li>El aspecto más importante de la planificación de trabajos es la capacidad de multiprogramar. ​</li><br>
+                                    <li>Seguía habiendo problemas: 
+                                        <ul>
+                                            <li>Entre la carga de los lotes (grandes demoras). ​</li><br>
+                                            <li>Si el trabajo se detenía el operador debía percatarse y determinar si fue detención normal o anormal. ​</li><br>
+                                            <li>Al terminar cada trabajo (bien normal o anormalmente), el operador debía reiniciar el computador para el siguiente lote. ​</li><br>
+                                        </ul>
+                                    </li><br>
+                                    <li>A fin de automatizar esto se creó el Secuenciador Automático de Trabajos dando origen al programa monitor.</li><br>
+                                    <li>Se introduce el JCL (Job Control Language) para el manejo del programa Monitor. ​</li><br>
+                                    <li>Encadenamiento de programas en Batch por tarjetas perforadas, con órdenes intercaladas para el programa monitor residente. ​</li>
                                 </ul>
                             </div>
                             <div class="genPic"><div class="genPicPic"></div></div>
                         </div>
                     </div>
 
-                    <div class="lineaGen gen1">
+                    <div class="lineaGen gen3">
                         <div class="genTitle">
-                            <h3>Tercera Generacion</h3>
+                            <h3>Tercera Generacion <br> <span style="color: white">Circuitos integrados (MSI, LSI) y SO.</span></h3>
                         </div>
                         <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
                         <div class="genCuerpo">
                             <div class="genText">
                                 <ul>
-                                    <li>No existe el concepto de sistema operativo.</li> <br>
-                                    <li>Existe el concepto de programa.</li> <br>
-                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                    <li>Desarrollo de los sistemas compartidos con multiprogramación, y los principios del multiprocesamiento. ​</li><br>
+                                    <li>En los sistemas de multiprogramación, varios programas de usuario se encuentran al mismo <br>
+                                         tiempo en la memoria principal (otros en la memoria de respaldo), y el procesador cambia <br>
+                                          rápidamente de un trabajo al otro.</li><br>
+                                    <li>En los sistemas de multiprocesamiento se utilizan varios procesadores en el mismo sistema <br>
+                                         para incrementar el poder de procesamiento. ​</li><br>
+                                    <li>Aparece la independencia de dispositivo:
+                                        <ul><br>
+                                            <li>El programa del usuario especifica las características de los dispositivos (Discos, Cintas, <br>
+                                                 Impresoras, etc.) que requieren los archivos. ​</li><br>
+                                            <li>El SO asigna los dispositivos correspondientes según los requerimientos y las disponibilidades. ​</li><br>
+                                            <li>Aparición de los Device Drivers. ​</li><br>
+                                        </ul>
+                                    </li><br>
+                                    <li>SO más avanzados fueron desarrollados para servir a múltiples usuarios interactivos en forma simultánea. </li><br>
+                                    <li>Los SO soportan simultáneamente procesos por lotes, tiempo compartido, procesamiento de tiempo real y multiprocesamiento. </li><br>
+                                    <li>Partición de la memoria en porciones, con trabajos distintos en cada una de ellas. ​</li><br>
+                                    <li>Aprovechamiento del tiempo de espera, en operaciones de E/S. </li><br>
+                                    <li>Protección por hardware del contenido de cada partición de memoria. ​</li><br>
+                                    <li>Aparición de técnicas de spooling: Simultaneous Peripheral Operation On <br>
+                                         Line: operación simultánea y en línea de periféricos.</li><br>
+                                    <li>Almacenamiento de trabajos de entrada y de salida en dispositivos transitorios rápidos (HD, RAM), (buffer’s). ​</li><br>
+                                    <li>Interponen una capa de software entre el usuario y el hardware. ​</li><br>
+                                    <li>Cobran fuerza los JCL (lenguajes de control de trabajos), necesarios para <br>
+                                         especificar el trabajo y los recursos requeridos. ​</li><br>
+                                    <li>Aparecen los sistemas de tiempo real, se usan donde se requieren tiempos de respuesta muy exigentes. ​</li><br>
+                                    <li>El tiempo compartido (timesharing), o multitarea, es una extensión lógica de la multiprogramación. <br>
+                                         La CPU ejecuta múltiples trabajos conmutando entre ellos a muy alta velocidad. ​</li><br>
+                                    <li>Un SO de tiempo compartido hace uso de planificación de la CPU y la multiprogramación.</li><br>
+                                    <li>Cada programa cargado en la memoria y en ejecución se denomina proceso. ​</li><br>
+                                    <li>Varios trabajos deben mantenerse sincrónicos en la memoria por los que requiere de administración y protección de la memoria. ​</li><br>
+                                    <li>Es necesario que los trabajos se intercambien entre la RAM (memoria operativa) y la de respaldo (memoria secundaria), <br>
+                                         ambos conforman la memoria virtual. ​</li><br>
+                                    <li>Debe incluir un sistema de archivos con administración de discos.</li><br>
+                                    <li>Para asegurar una ejecución ordenada debe contemplar mecanismos de sincronización y <br>
+                                         comunicación de los procesos, asegurando que estos no se bloqueen mutuamente. </li><br>
+                                    <li>Los SO de tiempo compartido son mas complejos que los de multiprogramación. </li><br>
                                 </ul>
                             </div>
                             <div class="genPic"><div class="genPicPic"></div></div>
                         </div>
                     </div>
 
-                    <div class="lineaGen gen1">
+                    <div class="lineaGen gen4">
                         <div class="genTitle">
-                            <h3>Cuarta Generacion</h3>
+                            <h3>Cuarta Generacion <br> <span style="color: white">Circuitos integrados (VLSI, GSI) y SO.</span></h3>
                         </div>
                         <div class="genTimeLine"><div class="genTimeLineFoto"></div></div>
                         <div class="genCuerpo">
                             <div class="genText">
                                 <ul>
-                                    <li>No existe el concepto de sistema operativo.</li> <br>
-                                    <li>Existe el concepto de programa.</li> <br>
-                                    <li>La programación se realiza interviniendo en el hardware.</li>
+                                    <li>Desarrollo de Sistemas Operativos de red.</li><br>
+                                    <li>Desarrollo de Sistemas Operativos en Tiempo Real. ​</li><br>
+                                    <li>Desarrollo de Sistemas Operativos de Procesamiento Paralelo. ​</li><br>
+                                    <li>Desarrollo de Sistemas Operativos Distribuidos. ​</li><br>
                                 </ul>
                             </div>
                             <div class="genPic"><div class="genPicPic"></div></div>
@@ -200,6 +273,26 @@
                     </div>
                     
 
+                </div>
+
+
+                <div class="desarrollo-2">
+                    <div class="tiemporeal">
+                        <h2>Sistemas Operativos en Tiempo Real</h2>
+                        <p>Se usan cuando los requisitos de tiempo de uso del procesador o el flujo de datos es
+                            estricto. Se dice que son <span style="font-weight: bold;">duros</span> cuando 
+                            se garantiza que las tareas criticas se terminen a tiempo. Y <span style="font-weight: bold;">blandos</span>
+                            cuando una tarea de tiempo real CRíTICA goza de prioridad frente a otras areas y conserva esta prioridad hasta que se lleva a cabo.
+                        </p> <br>
+                    </div>
+                    <div class="dered">
+                        <h2>Sistemas Operativos de Red</h2>
+                        <p>Se usan cuando los requisitos de tiempo de uso del procesador o el flujo de datos es
+                            estricto. Se dice que son <span style="font-weight: bold;">duros</span> cuando 
+                            se garantiza que las tareas criticas se terminen a tiempo. Y <span style="font-weight: bold;">blandos</span>
+                            cuando una tarea de tiempo real CRíTICA goza de prioridad frente a otras areas y conserva esta prioridad hasta que se lleva a cabo.
+                        </p> <br>
+                    </div>
                 </div>
             </div>
 

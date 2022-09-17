@@ -10,7 +10,7 @@ li{
 }
 
 main{
-    height: 600vh;
+    height: 1600vh;
     width: 100%;
     background-color: grey;
 
@@ -21,7 +21,7 @@ main{
 }
 
 .centralizador{
-    height: 90%;
+    height: 99%;
     width: 80%;
     background-color: darkblue;
 
@@ -31,29 +31,30 @@ main{
 }
 
 .banner{
-    height: 2%;
+    height: 1%;
     width:  100%;
     background-color: yellow;
-    
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.banner h1{
+    color: black;
+}
 .desarrollo{
     height: 100%;
     width: 100%;
     background-color: rgb(34, 34, 34);
 
     display: flex;
-    justify-content: center;
-    }
+    flex-direction: column;
+}
 
 .desarrollo-1{
-    height: 100%;
+    height: 44%;
     width: 100%;
     background-color: rgb(34, 34, 34);
-
+    
     color: white;
     padding: 5%;
 }
@@ -91,7 +92,7 @@ main{
 }
 
 .objetivos-image{
-    height: 80%;
+    height: 60%;
     width: 35%;
     background-color: rebeccapurple;
     background-image: url(img/foto1.png);
@@ -147,15 +148,6 @@ main{
     font-size: 18px;
 }
 
-.genTimeLine{
-    height: 18%;
-    width: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .genTimeLineFoto{
     height: 100%;
@@ -169,7 +161,7 @@ main{
     height: 75%;
     width: 100%;
     margin-top: 5%;
-
+    
     display: flex;
     flex-direction: row;
 }
@@ -179,6 +171,98 @@ main{
     margin-top: 2%;
 }
 
+
+.genPicPic{
+    height: 100%;
+    width: 100%;
+    background-image: url(img/generaciones/zero.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+
+.gen1 .genTimeLineFoto{
+    background-image: url(img/generaciones/cfirst.png);
+    background-size: cover;
+    background-repeat: round;
+}
+
+.gen1 .genPicPic{
+    background-image: url(img/generaciones/First-Generation-of-Computer.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+
+/*GEN 2*/
+
+.gen2{
+    height: 17%;
+}
+.gen2 .genTitle{
+    height: 8%;
+}
+
+
+.gen2 .genTimeLineFoto{
+    background-image: url(img/generaciones/csecond.png);
+    background-size: cover;
+    background-repeat: round;
+}
+
+
+.gen2 .genPicPic{
+    background-image: url(img/generaciones/second-generation-of-computer2.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+
+
+/*GEN 3*/
+
+.gen3{
+    height: 21%;
+}
+
+
+.gen3 .genTitle{
+    height: 8%;
+}
+
+
+.gen3 .genTimeLineFoto{
+    background-image: url(img/generaciones/cthird.png);
+    background-size: cover;
+    background-repeat: round;
+}
+
+.gen3 .genPicPic{
+    background-image: url(img/generaciones/third_generation.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+
+.gen4{
+    height: 8%;
+}
+
+.gen4 .genCuerpo{
+    height: 40%;
+    justify-content: center;
+} 
+
+.gen4 .genTimeLineFoto{
+    background-image: url(img/generaciones/cfourth.png);
+    background-size: cover;
+    background-repeat: round;
+}
+
+.gen4 .genPicPic{
+    background-image: url(img/generaciones/fourthGen.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+
+/*Fotos acompañantes de las generaciones (no confundir con linea temporal)*/
+
 .genPic{
     height: 80%;
     width: 25%;
@@ -187,10 +271,82 @@ main{
     justify-content: flex-end;
 }
 
-.genPicPic{
-    height: 100%;
+.gen0 .genPic{
+    height: 50%;
+}
+
+.gen1 .genPic{
+    height: 40%;
+}
+
+.gen2 .genPic{
+    height: 28%;
+}
+
+.gen3 .genPic{
+    height: 20%;
+}
+.gen4 .genPic{
+    height: 90%;
+}
+
+
+/*Lineas temporales*/
+
+.genTimeLine{
+    height: 18%;
     width: 100%;
-    background-image: url(img/generaciones/zero.jpg.crdownload);
-    background-size: cover;
-    background-repeat: round;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gen0 .genTimeLine{
+    height: 8%;
+}
+
+.gen1 .genTimeLine{
+    height: 8%;
+}
+
+.gen2 .genTimeLine{
+    height: 6%;
+}
+
+.gen3 .genTimeLine{
+    height: 6%;
+}
+
+
+
+
+
+
+
+
+
+
+/*DESARROLLO 2*/
+
+.desarrollo-2{
+    height: 56%;
+    width: 100%;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiemporeal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+.tiemporeal p{
+    padding: 2%;
+    width: 100%;
 }
