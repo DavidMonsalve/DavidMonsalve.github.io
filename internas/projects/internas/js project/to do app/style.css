@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background: rgb(6, 136, 153);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-centralizadora{
+    height: 90%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app{
+    background: white;
+
+    height: 25%;
+    width: 50%;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.app h2{
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.app .inputAndBoton{
+    background-color:none;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.app #tarea{
+    width: 75%;
+    height: 70%;
+    margin-right: 5%;
+
+    padding-left: 2%;
+}
+
+.app #botonAdd{
+    width: 15%;
+    height: 70%;
+    font-size: 40px;
+
+    color: white;
+    background-color: aqua;
+    border: 0ch;
+}
+
+.app #botonAdd:hover{
+    transform: scale(1.01);
+    background-color: rgb(7, 224, 224);
+}
+
+.lista{
+    background: white;
+
+    height: 20%;
+    width: 50%;
+}
+
+.lista .ListaFinalTask{
+    height: 100%;
+    width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        list-style-type: none;
+}
+
+.lista li{
+    height: 25%;
+    width: 75%;
+
+    margin-top: 2%;
+    background-color: rgb(212, 212, 212);
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 2%;
+}
+
+.lista li .btn-delete{
+    height: 100%;
+    width: 10%;
+    margin-left: auto;
+    padding: 5px 10px;
+
+    color: white;
+    background-color: red;
+    border: 0ch;
+    font-size: 15px;
+}
+
+.lista li .btn-delete:hover{
+    transform: scale(1.01);
+    background-color: rgb(201, 2, 2);
+}
+
+.empty{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

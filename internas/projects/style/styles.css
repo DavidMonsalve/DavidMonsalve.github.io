@@ -5,7 +5,82 @@
 }
 
 main {
-    height: 85vh;
+    height: 100vh;
     width: 100%;
     background: grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .center{
+    height: 90%;
+    width: 90%;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main .center .row{
+    height: 40%;
+    width: 95%;
+    
+    margin-top: 2%;
+    /*background-color: aliceblue;*/
+    
+    display: flex;
+    align-items: center;
+}
+
+main .center a{
+    height: 85%;
+    width: 20%;
+
+    margin-left: 2%;
+    background-color: aqua;
+    transition: .8s;
+
+    text-decoration: none;
+    border-radius: 10%;
+}
+
+main .center a:hover {
+    transform: scale(1.07);
+}
+main .center .row .card{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .center .row .card .card-img{
+    background-image: url(../img/todo.png);
+    background-size: cover;
+    background-repeat: round;
+    width: 80%;
+    height: 50%;
+    margin-top: 5%;
+}
+
+main .center .row .card .card-title{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .center .row .card .card-title h2{
+    margin-bottom: 10%;
+}
+main .center .row .card .card-title p{
+    color: red;
+    margin-right: 60%;
 }
