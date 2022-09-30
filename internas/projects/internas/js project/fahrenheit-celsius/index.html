@@ -5,26 +5,18 @@
 
 
 
-
-
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <link rel="stylesheet" href="style.css">
-    
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Document</title>
 </head>
 <body>
-    <script>
-         /* alert("This website is far from being completed.") */
-    </script>
-
     <header class="container" id="cabecera">
         <div id="logo">
-        <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
         </div>
         <a class="toggle-button" href="#">
             <span class="bar"></span>
@@ -42,43 +34,23 @@
     </header>
 
 
-
-
-
-
-
-
-
-
-
     <main>
-
-        <div class="seccion-centralizadora">
-            <div class="app">
-                <h2>To Do List</h2>
-            <div class="inputAndBoton">
-                <input type="text" placeholder="type your task" id="tarea">
-                <button id="botonAdd">+</button>
-            </div>
+        <div class="app">
+            <h1>Celcius-Fahrenheit converter</h1>
+            <div class="cTOf-app">
+                <input type="text" id="celsiusINPUT" placeholder="celsius to fahrenheit...">
+                <input type="button" id="celsiusBUT" onclick="toFaren()" value="Convert">
+                <p>result: <span id="farenConversion"></span></p>
             </div>
 
-            
-            <div class="lista">
-                <div class="empty">
-                    <p>No tasks to be done.</p>
-                </div>
-                <ul class="ListaFinalTask">
+            <div class="fTOc-app">
+                <input type="text" id="farenINPUT" placeholder="fahrenheit to celsius...">
+                <input type="button" id="farenBUT" onclick="toCelsius()" value="Convert">
+                <p>result: <span id="celsiusResult"></span></p>
 
-                </ul>
             </div>
         </div>
     </main>
-    
-    <script src="script.js"></script>
-
-
-
-
 
 
 
@@ -108,5 +80,19 @@
         </div>
 
     </footer>
+
+
+    <script>
+        function toFaren() {
+            valor = document.getElementById("celsiusINPUT").value
+            document.getElementById("farenConversion").innerHTML = parseInt(valor) + 32 + " F"
+        }
+
+        function toCelsius() {
+            F = parseInt(document.getElementById("farenINPUT").value)
+            document.getElementById("celsiusResult").innerHTML = Math.round((F - 32) * 5 / 9) + " C"
+        }
+
+    </script>
 </body>
 </html>

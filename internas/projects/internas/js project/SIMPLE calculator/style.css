@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app{
+    /*background-color: red; */
+
+    height: 40%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app .inputIN{
+    font-size: 20px;
+    width: 50%;
+
+    margin-top: 2%;
+
+    padding-left: 2%;
+}
+
+.app-buttons{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.app button{
+    width: 50%;
+}
+
+.app .inputBUT{
+    width: 10%;
+    height: 80%;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.app p{
+    margin-top: 2%;
+}

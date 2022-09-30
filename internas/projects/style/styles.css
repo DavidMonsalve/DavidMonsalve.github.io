@@ -70,6 +70,13 @@ main .center .row .card .card-img{
     margin-top: 5%;
 }
 
+main .center .row .card-2 .card-img{
+    background-image: url(../img/calculator.png);
+}
+main .center .row .card-3 .card-img{
+    background-image: url(../img/celsius.jpg);
+}
+
 main .center .row .card .card-title{
     height: 50%;
     display: flex;

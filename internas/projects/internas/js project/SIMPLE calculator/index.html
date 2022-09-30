@@ -1,30 +1,29 @@
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-
-
-
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <link rel="stylesheet" href="style.css">
-    
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Document</title>
 </head>
 <body>
-    <script>
-         /* alert("This website is far from being completed.") */
-    </script>
 
     <header class="container" id="cabecera">
         <div id="logo">
-        <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
         </div>
         <a class="toggle-button" href="#">
             <span class="bar"></span>
@@ -41,45 +40,20 @@
         </ul>
     </header>
 
-
-
-
-
-
-
-
-
-
-
     <main>
+        <div class="app">
+            <h1>Simple calculator</h1>
+            <input type="text" id="1stNumber" class="inputIN" placeholder="first number: ">
+            <input type="text" id="2ndNumber" class="inputIN" placeholder="second number: ">
 
-        <div class="seccion-centralizadora">
-            <div class="app">
-                <h2>To Do List</h2>
-            <div class="inputAndBoton">
-                <input type="text" placeholder="type your task" id="tarea">
-                <button id="botonAdd">+</button>
+            <div class="app-buttons">
+                <input type="button" onclick="multiply()" value="Multiply" class="inputBUT">
+                <input type="button" onclick="divide()" value="Divide" class="inputBUT">
             </div>
-            </div>
-
-            
-            <div class="lista">
-                <div class="empty">
-                    <p>No tasks to be done.</p>
-                </div>
-                <ul class="ListaFinalTask">
-
-                </ul>
-            </div>
+            <p>Result:</p>
+            <p id="result"></p>
         </div>
     </main>
-    
-    <script src="script.js"></script>
-
-
-
-
-
 
 
     <footer id="pie">
@@ -108,5 +82,23 @@
         </div>
 
     </footer>
+
+
+
+    <script>
+        function multiply()
+        {
+            num1 = document.getElementById("1stNumber").value
+            num2 = document.getElementById("2ndNumber").value
+            document.getElementById("result").innerHTML = num1 * num2
+        }
+
+        function divide()
+        {
+            num1 = document.getElementById("1stNumber").value
+            num2 = document.getElementById("2ndNumber").value
+            document.getElementById("result").innerHTML = num1 / num2
+        }
+    </script>
 </body>
 </html>
