@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
@@ -37,90 +37,53 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     <main>
-        <div class="container-a-title">
-            <h1>Python exercises</h1>
-        </div>
-        <div class="container-a">
+        <h1>Exercise 3</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>3. Los números de claves de dos cajas fuertes están intercalados dentro de un nú-
+                    mero entero llamado "clave maestra", cuya longitud no se conoce. Realizar un pro-
+                    grama para obtener ambas claves, donde la primera se construye con los dígitos
+                    ubicados en posiciones impares de la clave maestra y la segunda con los dígitos
+                    ubicados en posiciones pares. Los dígitos se numeran desde la izquierda. Ejemplo:
+                    Si clave maestra fuera 18293, la clave 1 sería 123 y la clave 2 sería 89.</p><br>
 
-            <div class="exercises-section">
 
-                <div class="e-column">
-                    <div class="column-image"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>University exercises</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>A list of all my exercises from college. </p>
-                            </div>
-                            <div class="column-button"><a href="internas/uade/index.html"><button>See more</button></a></div>
-                        </div>
-                    </div>
-                </div>
 
-              <!--  <div class="e-column">
-                    <div class="column-image c-2"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="e-column">
-                    <div class="column-image c-3"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div> -->
+                <p>English: </p><br>
+                <p>3. The key numbers of two safes are interleaved within a key number.
+                    mere integer called "master key", whose length is not known. Carry out a pro-
+                    gram to obtain both keys, where the first one is built with the digits
+                    located in odd positions of the master key and the second with the digits
+                    located in even positions. Digits are numbered from the left. Example:
+                    If master key was 18293, key 1 would be 123 and key 2 would be 89.</p>
+
+
 
 
             </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    claveMaestra = input("clave maestra: ")
+
+                    clave_1 = " "
+                    clave_2 = " "
+                    for i in range(len(claveMaestra)):
+                        if i % 2 == 0:
+                            clave_1 = clave_1 + claveMaestra[i]
+                        else:
+                            clave_2 = clave_2 + claveMaestra[i]
+                    
+                    print("Clave caja 1: ", clave_1)
+                    print("Clave caja 2: ", clave_2)
+                </pre>
+
+            </div>
         </div>
-
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

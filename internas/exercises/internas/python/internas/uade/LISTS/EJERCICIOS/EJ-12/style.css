@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 230vh;
+    width: 100%;
+    background-color: slategrey;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin-top: 5%;
+}
+
+.container_{
+    height: 80%;
+    width: 80%;
+    margin-top: 5%;
+    border: 1px solid;
+}
+
+.enunciado{
+    height: 30%;
+    width: 100%;
+
+    padding-left: 2%;
+    padding-top: 2%;
+    background-color: aliceblue;
+}
+
+.solution{
+    height: 70%;
+    width: 100%;
+    background-color: aliceblue;
+}

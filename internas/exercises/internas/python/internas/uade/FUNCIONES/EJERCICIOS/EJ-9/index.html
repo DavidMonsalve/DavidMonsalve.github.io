@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 9</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>9. Resolver el siguiente problema diseñando y utilizando funciones:
+
+                    Un productor frutihortícola desea contabilizar sus cajones de naranjas según el pe-
+                    so para poder cargar eI camión de reparto. La empresa cuenta con N camiones, y
+                    cada uno puede transportar hasta media tonelada (500 kilogramos). En un cajón
+                    caben 100 naranjas con un peso entre 200 y 300 gramos cada una. Si el peso de
+                    alguna naranja se encuentra fuera del rango indicado, se clasifica para procesar
+                    como jugo. Se solicita desarrollar un programa para ingresar la cantidad de naran-
+                    jas cosechadas e informar cuántos cajones se pueden llenar, cuántas naranjas son
+                    para jugo y si hay algún sobrante de naranjas que deba considerarse para el si-
+                    guiente reparto. Simular el peso de cada unidad generando un número entero al
+                    azar entre 150 y 350.
+                    
+                    Además, se desea saber cuántos camiones se necesitan para transportar la cose-
+                    cha, considerando que la ocupación del camión no debe ser inferior al 80%; en
+                    caso contrario el camión no serán despachado por su alto costo.</p><br>
+                <p>English: </p><br>
+                <p>9. Solve the following problem by designing and using functions:
+
+                    A fruit and vegetable producer wishes to account for his boxes of oranges according to the
+                    so I can load the delivery truck. The company has N trucks, and
+                    each can carry up to half a ton (500 kilograms). In a drawer
+                    100 oranges weigh between 200 and 300 grams each. If the weight of
+                    any orange is outside the indicated range, it is classified to process
+                    like juice. It is requested to develop a program to enter the amount of oranges
+                    harvested and report how many crates can be filled, how many oranges are
+                    for juice and if there are any leftover oranges that should be considered for the next
+                    next cast. Simulate the weight of each unit by generating an integer at
+                    random between 150 and 350.
+                    
+                    In addition, you want to know how many trucks are needed to transport the crop.
+                    cha, considering that the occupancy of the truck should not be less than 80%; in
+                    Otherwise, the truck will not be dispatched due to its high cost.</p>
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    
+                    import random
+
+                    def f_1(n):
+                        n_jugo = 0
+                        naranjasValidas = 0
+                        nUtilizables = 0
+                        cajones = 0
+                    
+                        peso_nValidas = []
+                        peso_total_nValidas = 0
+                        for i in range(n):
+                            
+                            peso_n = random.randint(150, 350)
+                    
+                            if (peso_n < 200) or (peso_n > 300):
+                                n_jugo += 1
+                            else:
+                                naranjasValidas += 1
+                                nUtilizables +=1
+                                peso_nValidas.append(naranjasValidas)
+                    
+                                if naranjasValidas == 100:
+                                    cajones += 1
+                    
+                                    for i in range(len(peso_nValidas)):
+                                        peso_total_nValidas = peso_total_nValidas + peso_nValidas[i]
+                                    
+                                    peso_nValidas = []
+                                    naranjasValidas = 0
+                        pesoEnKilos = (peso_total_nValidas // 1000)
+                    
+                    
+                        auxPeso = pesoEnKilos
+                        camiones = 0
+                        porcentaje_minimo = 500*0.80
+                    
+                        while (auxPeso > 500):
+                            camiones += 1
+                            auxPeso -= 500 
+                        if (auxPeso > porcentaje_minimo):
+                            camiones += 1
+                            auxPeso -= auxPeso
+                    
+                    
+                        print("total de naranjas utiles: ", nUtilizables)
+                        print("naranjas para jugo: ", n_jugo)
+                        print("naranjas restantes: ", naranjasValidas, " (es decir, las que no llegaron a completar un cajon)")
+                        print("Se pueden llenar: ", cajones, " cajones")
+                        print("peso total cajones (g): ", peso_total_nValidas)
+                        print("peso total cajones (kg): ", pesoEnKilos)
+                        
+                        print("-------------------------")
+                        print("camiones necesarios: ", camiones)
+                        print("total de naranja inmovilizada por falta de ocupacion en camion (menor al 80%): ", auxPeso, "KG")
+                    
+                    
+                    naranjas = int(input("Cantidad naranjas: "))
+                    
+                    
+                    f_1(naranjas)
+                    
+                    
+                    salida = input("presiona cualquier tecla para salir.")
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

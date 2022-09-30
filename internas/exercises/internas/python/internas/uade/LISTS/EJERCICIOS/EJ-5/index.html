@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
@@ -37,90 +37,57 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     <main>
-        <div class="container-a-title">
-            <h1>Python exercises</h1>
-        </div>
-        <div class="container-a">
+        <h1>Exercise 5</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>5. Escribir una función que reciba una lista como parámetro y devuelva True si la lista
+                    está ordenada en forma ascendente o False en caso contrario. Por ejemplo,
+                    ordenada([1, 2, 3]) retorna True y ordenada(['b', 'a']) retorna False. Desarrollar
+                    además un programa para veriﬁcar el comportamiento de la función.</p><br>
 
-            <div class="exercises-section">
 
-                <div class="e-column">
-                    <div class="column-image"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>University exercises</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>A list of all my exercises from college. </p>
-                            </div>
-                            <div class="column-button"><a href="internas/uade/index.html"><button>See more</button></a></div>
-                        </div>
-                    </div>
-                </div>
 
-              <!--  <div class="e-column">
-                    <div class="column-image c-2"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="e-column">
-                    <div class="column-image c-3"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div> -->
+                <p>English: </p><br>
+                <p>5. Write a function that receives a list as a parameter and returns True if the list
+                    is sorted in ascending order or False otherwise. For example,
+                    sorted([1, 2, 3]) returns True and sorted(['b', 'a']) returns False. Develop
+                    also a program to verify the behavior of the function.</p>
+
+
 
 
             </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+
+                    def calcular(x):
+                    flag = 0
+                    i = 1
+                    while (i < len(x)):
+                        if x[i] < x[i-1]:
+                            flag = 1
+                        i +=1
+                    if flag == 1:
+                        return False
+                    else:
+                        return True
+                
+                x = [1, 2, 3, 4, 5]
+                y = [1, 5, 3, 4, 5]
+                z = ["b", "a"]
+                k = ["a", "b"]
+                
+                print(calcular(x))
+
+                </pre>
+
+            </div>
         </div>
-
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

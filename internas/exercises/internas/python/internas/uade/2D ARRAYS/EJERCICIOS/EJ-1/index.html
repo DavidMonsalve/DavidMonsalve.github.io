@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 1</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>1. Desarrollar cada una de las siguientes funciones y escribir un programa que permi-
+                    ta verificar su funcionamiento, imprimiendo la matriz luego de invocar a cada fun-
+                    ción:
+                    
+                    a. Cargar números enteros en una matriz de N x N, ingresando los datos desde
+                    teclado.
+                    
+                    b. Ordenar en forma ascendente cada una de las filas de la matriz.
+                    
+                    c. Intercambiar dos filas, cuyos números se reciben como parámetro.
+                    
+                    d. Intercambiar dos columnas dadas, cuyos números se reciben como parámetro.
+                    
+                    e. Trasponer la matriz sobre si misma. (intercambiar cada elemento Aij por Ají)
+                    
+                    f. Calcular el promedio de los elementos de una fila, cuyo número se recibe como
+                    parámetro.
+                    
+                    g. Calcular el porcentaje de elementos con valor impar en una columna, cuyo nú-
+                    mero se recibe como parámetro.
+                    
+                    h. Determinar si la matriz es simétrica con respecto a su diagonal principal.
+                    
+                    i. Determinar si la matriz es simétrica con respecto a su diagonal secundaria.
+                    
+                    j. Determinar qué columnas de la matriz son palíndromos (capicúas), devolviendo
+                    una lista con los números de las mismas.
+                    
+                    NOTA: El valor de N debe leerse por teclado. Las funciones deben servir cualquiera
+                    
+                    sea el valor ingresado.</p><br>
+               
+               
+                <p>English: </p><br>
+                <p>1. Develop each of the following functions and write a program that allows
+                    Let's verify its operation, printing the matrix after invoking each function.
+                    tion:
+                    
+                    a. Load integers into an N x N matrix, inputting the data from
+                    keyboard.
+                    
+                    b. Sort each row of the matrix in ascending order.
+                    
+                    c. Swap two rows, whose numbers are received as a parameter.
+                    
+                    d. Swap two given columns, whose numbers are received as a parameter.
+                    
+                    and. Transpose the matrix on itself. (exchange each element Aij for Ají)
+                    
+                    F. Calculate the average of the elements of a row, whose number is received as
+                    parameter.
+                    
+                    g. Calculate the percentage of elements with an odd value in a column, whose number
+                    mere is received as a parameter.
+                    
+                    h. Determine if the matrix is ​​symmetric with respect to its main diagonal.
+                    
+                    Yo. Determine if the matrix is ​​symmetric with respect to its secondary diagonal.
+                    
+                    J. Determine which columns of the matrix are palindromes (capicuas), returning
+                    a list with their numbers.
+                    
+                    NOTE: The value of N must be read by keyboard. Functions should serve any
+                    
+                    be the entered value.</p>
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    
+                    
+                    def leerMatriz(matriz, filas, columnas):
+                    for f in range (filas):
+                        for c in range (columnas):
+                            print(matriz[f][c], end=" ")
+                        print(" ")
+                
+                    def cargar():
+                        filas = int(input("Ingrese cantidad de filas y columnas: "))
+                        columnas = filas
+                        matriz = [columnas*[0] for f in range(filas)]
+                        print(matriz)
+                        for f in range (filas):
+                            for c in range (columnas):
+                                dato = int(input("ingrese valor "))
+                                matriz[f][c] = dato
+                        leerMatriz(matriz, filas, columnas)
+                        return matriz
+                    
+                    
+                    def ordenAscendente(matriz):
+                        matrizAscendente = list(matriz)
+                        filas = len(matrizAscendente[0])
+                        columnas = filas
+                        aux = 0
+                        i = 1
+                        while (i < filas):
+                            if matrizAscendente[i-1][0] > matrizAscendente[i][0]:
+                                aux = matrizAscendente[i]
+                                matrizAscendente[i] = matrizAscendente[i-1]
+                                matrizAscendente[i-1] = aux
+                            i += 1
+                        print("----matriz en orden ascendente por filas.----")
+                        leerMatriz(matrizAscendente, filas, columnas)
+                    
+                    def cargarFilasAintercambiar(matriz):
+                        a = int(input("fila: "))
+                        while (a < 0) or (a > (len(matriz) - 1)):
+                            print("ingrese nuevamente - ERROR")
+                            a = int(input("fila: "))
+                        return a 
+                    
+                    def intercambiarFilas(matriz, a, b):
+                        columnas = len(matriz[0])
+                        filas = len(matriz)
+                        print("----Intercambiando filas----")
+                        print("moviendo fila ", a, " al lugar de ", b)
+                        aux = matriz[a]
+                        matriz[a] = matriz[b]
+                        matriz[b] = aux
+                        leerMatriz(matriz, filas, columnas)
+                    
+                    def transponer(matriz):
+                        t = [] 
+                        columnas = len(matriz[0])
+                        filas = len(matriz)
+                        for i in range (columnas):
+                            t.append([])
+                            for j in range (filas):
+                                t[i].append(matriz[j][i])
+                        return t
+                    
+                    def promedioFila(matriz):
+                        fila = int(input("Fila de la cual desea saber promedio: "))
+                        columnas = len(matriz[0])
+                        sumador = 0
+                        for i in range (columnas):
+                            sumador = sumador + matriz[fila][i]
+                        promedio = sumador / columnas
+                        print(promedio)
+                    
+                    def porcentajeImpar(matriz):
+                        fila = int(input("Fila de la cual desea saber porcentaje de elementos impares: "))
+                        columnas = len(matriz[0])
+                        sumador = 0
+                        for i in range (columnas):
+                            if (matriz[fila][i] % 2 != 0):
+                                sumador +=1
+                        porcentaje = (sumador/columnas)*100
+                        print(porcentaje, "%")
+                    
+                    def SimetriaDiagonalPrincipal(matriz):
+                        print("--------------Calculando simetria de matriz con respecto a diagonal principal--------------")
+                        diagonalPrincipal = []
+                        for i in range(len(matriz)):
+                            diagonalPrincipal.append(matriz[i][i])
+                        diagonalPrincipalInvertida = list(diagonalPrincipal)
+                        diagonalPrincipalInvertida.reverse()
+                        print(diagonalPrincipal)
+                        print(diagonalPrincipalInvertida)
+                    
+                        if diagonalPrincipal == diagonalPrincipalInvertida:
+                            print("La matriz es simetrica en relacion a su diagonal principal!")
+                        else:
+                            print("La matriz NO es simetrica en relacion a su diagonal principal...")
+                    
+                    def SimetriaDiagonalSecundaria(matriz):
+                        print("--------------Calculando simetria de matriz con respecto a diagonal secundaria--------------")
+                        diagonalSecundaria = []
+                        columna = 0
+                        for i in range(len(matriz)-1, -1, -1):
+                            diagonalSecundaria.append(matriz[i][columna])
+                            columna += 1
+                        diagonalSecundariaInvertida = list(diagonalSecundaria)
+                        diagonalSecundariaInvertida.reverse()
+                        print(diagonalSecundaria)
+                        print(diagonalSecundariaInvertida)
+                    
+                        if diagonalSecundaria == diagonalSecundariaInvertida:
+                            print("La matriz es simetrica en relacion a su diagonal secundaria!")
+                        else:
+                            print("La matriz NO es simetrica en relacion a su diagonal secundaria...")
+                    
+                    def columnasPalindromos(matriz, filas, columnas):
+                        x = transponer(matriz)
+                        leerMatriz(x, filas, columnas)
+                        lista = []
+                        listaFinal = []
+                        for i in range(filas):
+                            lista = []
+                            lista2 = []
+                            for j in range(columnas):
+                                lista.append(x[i][j])
+                            lista2 = list(lista)
+                            lista2.reverse()
+                            if lista == lista2:
+                                print("columna ", i, " es capicua: ", lista)
+                                listaFinal.append(lista)
+                            else:
+                                print("columna ", i, " no es capicua")
+                        print("Numeros de columnas capicuas: ", listaFinal)
+                    
+                    
+                    
+                    matriz = cargar()
+                    columnas = len(matriz[0])
+                    filas = len(matriz)
+                    
+                    ordenAscendente(matriz)
+                    
+                    print("----- filas a cambiar -----")
+                    print("¿Cuales filas desea intercambiar?")
+                    a = cargarFilasAintercambiar(matriz)
+                    b = cargarFilasAintercambiar(matriz)
+                    intercambiarFilas(matriz, a, b)
+                    
+                    print("-----Transponer matriz-----")
+                    print("MATRIZ ORIGINAL")
+                    leerMatriz(matriz, filas, columnas)
+                    t = transponer(matriz)
+                    print("MATRIZ TRANSPUESTA")
+                    leerMatriz(t, filas, columnas)
+                    
+                    promedioFila(matriz)
+                    porcentajeImpar(matriz)
+                    SimetriaDiagonalPrincipal(matriz)
+                    SimetriaDiagonalSecundaria(matriz)
+                    
+                    print("-------Calculando columnas capicuas----------")
+                    columnasPalindromos(matriz, filas, columnas)
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

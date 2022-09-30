@@ -76,7 +76,12 @@ h1{
     align-items: center;
 }
 
-.column-button button{
+.column-button a{
     height: 80%;
     width: 25%;
+}
+
+.column-button button{
+    height: 100%;
+    width: 100%;
 }

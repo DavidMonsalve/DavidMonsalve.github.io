@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 11</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>11.Reso|ver el siguiente problema, diseñando las funciones a utilizar:
+                    Una clínica necesita un programa para atender a sus pacientes. Cada paciente que
+                    ingresa se anuncia en la recepción indicando su número de afiliado (número entero
+                    de 4 dígitos) y además indica si Viene por una urgencia (ingresando un 0) o con
+                    turno (ingresando un 1). Para finalizar se ingresa -1 como número de socio. Luego
+                    se solicita:
+                    
+                    a. Mostrar un listado de los pacientes atendidos por urgencia y un listado de
+                    los pacientes atendidos por turno en el orden que llegaron a la clínica.
+                    
+                    b. Realizar la búsqueda de un número de afiliado e informar cuántas veces
+                    fue atendido por turno y cuántas por urgencia. Repetir esta búsqueda has-
+                    ta que se ingrese -1 como número de afiliado.</p><br>
+
+
+
+
+                <p>English: </p><br>
+                <p>11.Reso|see the following problem, designing the functions to use:
+                    A clinic needs a program to serve its patients. Every patient who
+                    enter is announced at the reception indicating your membership number (integer number
+                    of 4 digits) and also indicates if it comes for an emergency (entering a 0) or with
+                    turn (by entering a 1). To finish, enter -1 as the membership number. Later
+                    is requested:
+                    
+                    a. Show a list of patients attended by emergency and a list of
+                    the patients attended by shift in the order that they arrived at the clinic.
+                    
+                    b. Search for an affiliate number and report how many times
+                    was attended by shift and how many by urgency. Repeat this search until
+                    Please enter -1 as the affiliate number.</p>
+
+
+
+
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    def registrarUrgencias(urgencias, afiliado):
+                    urgencias.append(afiliado)
+                    return urgencias
+                def registrarTurnos(turnos, afiliado):
+                    turnos.append(afiliado)
+                    return turnos
+                def buscarAfiliadoUrgencias(lista, afiliado):
+                    x = lista.count(afiliado)
+                    return x
+                def buscarAfiliadoTurnos(lista, afiliado):
+                    y = lista.count(afiliado)
+                    return y
+                
+                urgencias = []
+                turnos = []
+                
+                
+                
+                #ingresamos el codigo la primera vez
+                afiliado = int(input("Codigo de afiliado (-1 para finalizar): "))
+                if afiliado != -1:
+                    while (afiliado < 1000) or (afiliado > 9999):
+                        print("codigo erroneo.")
+                        print("solo codigos de cuatro digitos son permitidos")
+                        afiliado = int(input("Codigo de afiliado (-1 para finalizar): "))
+                
+                #inicializamos un ciclo while para seguir haciendolo cuantas veces sea necesario.
+                
+                while (afiliado != -1):
+                
+                    #registro el tipo de visita
+                    tipoVisita = int(input("0 si viene por emergencia, 1 si viene con turno: "))
+                    while (tipoVisita > 1) or (tipoVisita < 0):
+                        print("Ingresar unicamente 1 ó 0.")
+                        tipoVisita = int(input("0 si viene por emergencia, 1 si viene con turno: "))
+                
+                    if (tipoVisita == 0):
+                        xUrgencias = registrarUrgencias(urgencias ,afiliado)
+                        urgencias = xUrgencias
+                    else:
+                        xTurnos = registrarTurnos(turnos, afiliado)
+                        turnos = xTurnos
+                    #registramos otro usuario o paramos el ciclo
+                
+                    
+                    afiliado = int(input("Codigo de afiliado (-1 para finalizar): "))
+                    if afiliado != -1:
+                        while (afiliado < 1000) or (afiliado > 9999):
+                            print("codigo erroneo.")
+                            print("solo codigos de cuatro digitos son permitidos")
+                            afiliado = int(input("Codigo de afiliado (-1 para finalizar): "))
+                    
+                print("Urgencias: ", urgencias)
+                print("Turnos: ", turnos)
+                
+                
+                afiliado = int(input("Codigo de afiliado a buscar en las listas (-1 para finalizar): "))
+                if afiliado != -1:
+                    while (afiliado < 1000) or (afiliado > 9999):
+                        print("codigo erroneo.")
+                        print("solo codigos de cuatro digitos son permitidos")
+                        afiliado = int(input("Codigo de afiliado (-1 para finalizar): "))
+                
+                while (afiliado != -1):
+                    print("Cantidad de veces que el afiliado ", afiliado, " entro por urgencias: ", buscarAfiliadoUrgencias(urgencias, afiliado))
+                    print("Cantidad de veces que el afiliado ", afiliado, " entro con turno: ", buscarAfiliadoTurnos(turnos, afiliado))
+                
+                    afiliado = int(input("Codigo de afiliado a buscar en las listas (-1 para finalizar): "))
+                    if afiliado != -1:
+                        while (afiliado < 1000) or (afiliado > 9999):
+                            print("codigo erroneo.")
+                            print("solo codigos de cuatro digitos son permitidos")
+                            afiliado = int(input("Codigo de afiliado (-1 para finalizar): "))
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

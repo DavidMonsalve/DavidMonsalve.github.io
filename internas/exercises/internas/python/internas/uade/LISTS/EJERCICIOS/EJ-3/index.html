@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
@@ -37,90 +37,49 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     <main>
-        <div class="container-a-title">
-            <h1>Python exercises</h1>
-        </div>
-        <div class="container-a">
+        <h1>Exercise 3</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>3. Crear una lista con los cuadrados de los números entre 1 y N (ambos incluidos),
+                    donde N se ingresa desde el teclado. Luego se solicita imprimir los últimos 10 valo-
+                    res de la lista.</p><br>
 
-            <div class="exercises-section">
 
-                <div class="e-column">
-                    <div class="column-image"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>University exercises</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>A list of all my exercises from college. </p>
-                            </div>
-                            <div class="column-button"><a href="internas/uade/index.html"><button>See more</button></a></div>
-                        </div>
-                    </div>
-                </div>
 
-              <!--  <div class="e-column">
-                    <div class="column-image c-2"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="e-column">
-                    <div class="column-image c-3"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div> -->
+                <p>English: </p><br>
+                <p>3. Create a list with the squares of the numbers between 1 and N (both included),
+                    where N is entered from the keyboard. Then it is requested to print the last 10 values.
+                    rest of the list.</p>
+
+
 
 
             </div>
+            <div class="solution">
+                <pre class="prettyprint">
+                    def cuadrado(N):
+                        lista = []
+                        for i in range(N):
+                            x = (i+1)**2
+                            lista.append(x)
+                        print("Lista completa: ", lista)
+                        print("Ultimos 10 elementos de la lista: ", lista[10:])
+
+                    n = int(input("A: "))
+                    while(n < 10):
+                        print("numero invalido, debe ser mayor que 9")
+                        n = int(input("A: "))
+                    cuadrado(n)
+
+
+                </pre>
+
+            </div>
         </div>
-
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

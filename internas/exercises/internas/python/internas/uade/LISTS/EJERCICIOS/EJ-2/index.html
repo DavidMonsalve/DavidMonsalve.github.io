@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 2</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>2. Escribir funciones para:
+
+                    a. Generar una lista de 50 números aleatorios del 1 al 100.
+                    
+                    b. Recibir una lista como parámetro y devolver True si la misma contiene algún
+                    elemento repetido. La función no debe modificar la lista.
+                    
+                    c. Recibir una lista como parámetro y devolver una nueva lista con los elementos
+                    únicos de la lista original, sin importar el orden.
+                    
+                    Combinar estas tres funciones en un mismo programa.</p><br>
+
+
+
+
+                <p>English: </p><br>
+                <p>2. Write functions for:
+
+                    a. Generate a list of 50 random numbers from 1 to 100.
+                    
+                    b. Receive a list as a parameter and return True if it contains any
+                    repeated element. The function must not modify the list.
+                    
+                    c. Receive a list as a parameter and return a new list with the elements
+                    unique to the original list, regardless of order.
+                    
+                    Combine these three functions in the same program.</p>
+
+
+
+
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    
+                    from random import randint
+
+                    #Recibir una lista como parametro y devolver True si la misma contiene algun elemento repetido. La funcion no debe modificar la lista.
+                    def hayRepetidos(lista):
+                        cuenta = [lista.count(numeros) for numeros in set(lista)]    
+                        total = 1
+                        
+                        #se supone que si ningun elemento se repitio, el set creado previamente debe tener todos sus valores
+                        #equivalentes a 1, si los multiplicamos entre si por 1, el resultado debe ser 1. De lo contrario es porque algun valor se repitio
+                        #y nuestra funcion retornara False.
+                        
+                        for i in range(len(cuenta)):
+                            total = cuenta[i]*total
+
+                        if total > 1:
+                            return True
+                        else:
+                            return False
+                        
+
+                    #Recibir una lista como parametro y devolver una nueva lista con los elementos unicos de la lista original, sin importar el orden.
+                    def elementos_unicos(lista):
+
+                        #Cuento cuantas veces se repitio un numero, lo guardo en OcurrenciasDeElementos, creo otra lista llamada Output.
+                        #Si el indice de OcurrenciasDeElementos es igual a 1, significa que dicho elemento solo esta una vez en nuestra lista.
+                        #Aprovechando que todas las listas tienen el mismo Length, utilizo el indice de la lista original pasada como parametro
+                        #para añadir en Output los valores unicos.
+                        output = []
+                        OcurrenciasDeElementos = [lista.count(numeros) for numeros in lista]
+                        print("----------------------------")
+                        print("Lista original: ", lista)
+                        for i in range (len(OcurrenciasDeElementos)):
+                            if OcurrenciasDeElementos[i] == 1:
+                                output.append(lista[i])
+                        return output
+
+
+                    #Generar una lista de 50 numeros aleatorios del 1 al 100.
+                    lista = []
+
+                    for i in range(50):
+                        lista.append(randint(1, 100))
+                    print("-----Lista original-------")
+                    print(lista)
+
+                    print("-------hay repetidos?---------")
+                    print(hayRepetidos(lista))
+
+
+                    listaNueva = [1, 2, 1, 5, 3]
+                    listaSinRepetidos = elementos_unicos(listaNueva)
+                    print("Lista sin repetidos: ", listaSinRepetidos)
+
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 6</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>6. Desarrollar una función que extraiga una subcadena de una cadena de caracteres,
+                    indicando la posición y la cantidad de caracteres deseada. Devolver la subcadena
+                    como valor de retorno. Escribir también un programa para veriﬁcar el comporta-
+                    miento de la misma. Ejemplo, dada la cadena "El número de teléfono es 4356-
+                    7890" extraer la subcadena que comienza en la posición 25 y tiene 9 caracteres,
+                    resultando la subcadena "4356-7890". Escribir una función para cada uno de los si-
+                    guientes casos:
+                    
+                    a. Utilizando rebanadas
+                    b. Sin utilizar rebanadas</p><br>
+
+
+
+
+                <p>English: </p><br>
+                <p>6. Develop a function that extracts a substring from a character string,
+                    indicating the position and number of characters desired. return substring
+                    as return value. Also write a program to check the behavior
+                    I lie about it. Example, given the string "Phone number is 4356-
+                    7890" extract the substring that starts at position 25 and is 9 characters long,
+                    resulting in the substring "4356-7890". Write a function for each of the following
+                    following cases:
+                    
+                    a. using slices
+                    b. without using slices</p>
+
+
+
+
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    def rebanadas(cadena, pos, cant, largo):
+                        if (largo >= cant) and (largo >= pos):
+                            print(cadena[pos:(pos+cant)])
+                        else:
+                            print("con los datos ingresados no se puede trabajar.")
+                
+                
+                    def sinRebanadas(cadena, pos, cant, largo):
+                        texto = ""
+                        for i in range(cant):
+                            texto = texto + cadena[pos]
+                            pos += 1
+                        print(texto)
+                    
+                    
+                    cadena = input("Cadena de texto: ")
+                    pos = int(input("posicion a buscar: "))
+                    cant = int(input("cant de caracteres: "))
+                    largo = len(cadena)
+                    
+                    rebanadas(cadena, pos, cant, largo)
+                    sinRebanadas(cadena, pos, cant, largo)
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

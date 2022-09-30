@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
     <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
@@ -37,90 +37,43 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     <main>
-        <div class="container-a-title">
-            <h1>Python exercises</h1>
-        </div>
-        <div class="container-a">
+        <h1>Exercise 8</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>8. Utilizar la técnica de listas por comprensión para construir una lista con todos los
+                    números impares comprendidos entre 100 y 200.</p><br>
 
-            <div class="exercises-section">
 
-                <div class="e-column">
-                    <div class="column-image"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>University exercises</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>A list of all my exercises from college. </p>
-                            </div>
-                            <div class="column-button"><a href="internas/uade/index.html"><button>See more</button></a></div>
-                        </div>
-                    </div>
-                </div>
 
-              <!--  <div class="e-column">
-                    <div class="column-image c-2"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="e-column">
-                    <div class="column-image c-3"></div>
-                    <div class="column-body">
-                        <div class="column-title"><p>Exercises from Lorem Ipsum</p></div>
-                        <div class="column-textandButton">
-                            <div class="column-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                            </div>
-                            <div class="column-button"><button>See more</button></div>
-                        </div>
-                    </div>
-                </div> -->
+                <p>English: </p><br>
+                <p>8. Use the list comprehension technique to build a list of all the
+                    odd numbers between 100 and 200.</p>
+
+
 
 
             </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    x = []
+                    n = int(input("cantidad de valores: "))
+                    
+                    for i in range (n):
+                        elemento = int(input("elemento: "))
+                        while (elemento > 200) or (elemento < 100) or (elemento % 2 == 0):
+                            print("elemento invalido, intente de nuevo")
+                            elemento = int(input("elemento: "))
+                        x.append(elemento)
+                    print(x)
+                </pre>
+
+            </div>
         </div>
-
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

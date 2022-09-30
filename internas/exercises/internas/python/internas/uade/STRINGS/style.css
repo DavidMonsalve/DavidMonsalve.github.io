@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: slategrey;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    height: 10%;
+    margin-top: 5%;
+
+}
+
+.container_{
+    height: 30%;
+    width: 85%;
+    border: 1px solid;
+}
+
+.column{
+    height: 100%;
+    width: 100%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+}
+
+.column a{
+    height: 90%;
+    width: 18%;
+    margin-left: 1.5%;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+}

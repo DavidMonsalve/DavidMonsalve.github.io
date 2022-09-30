@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 4</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>4. Una fábrica de bicicletas guarda en una matriz la cantidad de unidades producidas
+                    en cada una de sus plantas durante una semana. De este modo, cada columna re-
+                    presenta el día de la semana (Lunes columna 0, Martes columna 1...) y cada fila
+                    representa a una de sus fábricas. Ejemplo:</p><br>
+               
+               
+                <p>English: </p><br>
+                <p>4. A bicycle factory stores the number of units produced in an array.
+                    on each of your plants for a week. In this way, each column
+                    displays the day of the week (Monday column 0, Tuesday column 1...) and each row
+                    represents one of its factories. Example:</p>
+                <img src="/internas/exercises/internas/python/internas/uade/2D ARRAYS/img/b.png" alt="">
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    
+                    from random import randint
+
+                    def crear(filas, columnas):
+                        matriz = [[0]*columnas for i in range(filas)]
+                        return matriz
+                    
+                    def cargar(matriz, filas, columnas):
+                        for i in range(filas):
+                            for j in range(columnas):
+                                matriz[i][j] = randint(0, 150)
+                    
+                    #imprime la matriz de una forma mas grafica.    
+                    def imprimir(matriz, filas, columnas):
+                        for i in range(filas):
+                            print("[fabrica", i+1,"]", end=" ")
+                            for j in range(columnas):
+                                print(matriz[i][j], end=" ")
+                            print(" ")
+                    
+                    def seleccionDia(maxDia):
+                        if (maxDia == 0):
+                            print("lunes")
+                        elif(maxDia == 1):
+                            print("martes")
+                        elif(maxDia == 2):
+                            print("miercoles")
+                        elif(maxDia == 3):
+                            print("jueves")
+                        elif(maxDia == 4):
+                            print("viernes")
+                        elif(maxDia == 5):
+                            print("sabado")
+                    
+                    def imprimirTranspuesta(t, filasT, columnasT):
+                        for i in range(filasT):
+                            for j in range(columnasT):
+                                print(t[i][j], end=" ")
+                            print(" ")
+                    
+                    #Mostrar la cantidad de bicicletas fabricadas por cada fabrica
+                    def totalPorFabrica(matriz, filas, columnas):
+                        for i in range(filas):
+                            total = 0
+                            for j in range(columnas):
+                                total = total + matriz[i][j]
+                            print("Fabrica", i+1, " = ", total)
+                    
+                    #Cual es la fabrica que mas produjo en un solo dia (detallar dia y fabrica)
+                    def maxProd(matriz, filas, columnas):
+                        max = 0
+                        maxFab = -1
+                        maxDia = -1
+                        for i in range(filas):
+                            for j in range(columnas):
+                                if (matriz[i][j] > max):
+                                    max = matriz[i][j]
+                                    maxFab = i+1
+                                    maxDia = j
+                        print("-----FABRICA con Maxima Producción-----")
+                        print("FABRICA ", maxFab)
+                        print("cantidad: ", max)
+                        
+                        seleccionDia(maxDia)
+                    
+                    
+                    #Cual es el dia mas productivo, considerando todas las fabricas combinadas.
+                    def diaMasProd(matriz, filas, columnas):
+                        t = []
+                        #voy a transponer la matriz, en una nueva matriz. De esta manera puedo recorrerla de una manera mas comoda y legible para otro programador.
+                        for i in range(columnas):
+                            t.append([])
+                            for j in range(filas):
+                                t[i].append(matriz[j][i])
+                            filasT = len(t)
+                            columnasT = len(t[0])
+                        #print("----Matriz Transpuesta----")
+                        #imprimirTranspuesta(t, filasT, columnasT)
+                    
+                        #ahora las columnas son los dias y las filas las fabricas.
+                        #ahora recorro cada columna, a ver cual dia fue el mas productivo.
+                        print("----DIA mas productivo----")
+                    
+                        max = -1
+                        diaMax = -1
+                        for i in range(filasT):
+                            total = 0
+                            for j in range(columnasT):
+                                total = total + t[i][j]
+                            print("Total dia", i, " = ", total)
+                            if total > max:
+                                max = total
+                                diaMax = i
+                            
+                        print("Dia mas productivo: ", end=" ")
+                        seleccionDia(diaMax)
+                        print("cantidad producida: ", max)
+                    
+                    def menorPorFabrica(matriz, filas, columnas):
+                        max = 151
+                        lista = [min(matriz[i][j] for j in range(columnas)) for i in range(filas)]
+                        print("----Menor cantidad por FABRICA----")
+                        print(lista)
+                    
+                        for i in range(len(lista)):
+                            print("FABRICA", i+1, "=", lista[i])
+                    
+                    
+                    filas = int(input("filas: "))
+                    columnas = int(input("columnas: "))
+                    
+                    matriz = crear(filas, columnas)
+                    cargar(matriz, filas, columnas)
+                    imprimir(matriz, filas, columnas)
+                    
+                    totalPorFabrica(matriz, filas, columnas)
+                    maxProd(matriz, filas, columnas)
+                    diaMasProd(matriz, filas, columnas)
+                    imprimir(matriz, filas, columnas)
+                    menorPorFabrica(matriz, filas, columnas)                    
+
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 4</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>4. Un comercio de electrodomésticos necesita para su línea de cajas un programa que
+                    le indique al cajero el cambio que debe entregarle al cliente. Para eso se ingresan
+                    dos números enteros, correspondientes al total de la compra y al dinero recibido.
+                    Informar cuántos billetes de cada denominación deben ser entregados al cliente
+                    como vuelto, de tal forma que se minimice la cantidad de billetes. Considerar que
+                    existen billetes de 5500, 5100, 350, 320, 310, SS y Sl. Emitir un mensaje de error
+                    si el dinero recibido fuera insuficiente. Ejemplo: Si la compra es de S317 y se abo-
+                    na con 3500, el vuelto debe contener 1 billete de 3100, 1 billete de 350, 1 billete
+                    de 520, 1 billete de 510 y 3 billetes de 51.</p><br>
+                <p>English: </p><br>
+                <p>4. An appliance store needs a program for its checkout line that
+                    Tell the cashier how much change to give to the customer. For that they enter
+                    two whole numbers, corresponding to the total purchase and the money received.
+                    Inform how many bills of each denomination must be delivered to the client
+                    as change, in such a way as to minimize the number of bills. consider that
+                    there are bills of 5500, 5100, 350, 320, 310, SS and Sl. Issue an error message
+                    if the money received was insufficient. Example: If the purchase is for S317 and the
+                    na with 3,500, the change must contain 1 bill of 3,100, 1 bill of 350, 1 bill
+                    of 520, 1 bill of 510 and 3 bills of 51.</p>
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    
+                    def vuelto(c, r):
+                        diferencia = r - c
+                        billetes = []
+                        if (diferencia > 0):
+                            while (diferencia >= 500):
+                                billetes.append("500")
+                                diferencia = diferencia - 500
+                            while (diferencia >= 100):
+                                billetes.append("100")
+                                diferencia = diferencia - 100
+                            while (diferencia >= 50):
+                                billetes.append("50")
+                                diferencia = diferencia - 50
+                            while (diferencia >= 20):
+                                billetes.append("20")
+                                diferencia = diferencia - 20
+                            while (diferencia >= 10):
+                                billetes.append("10")
+                                diferencia = diferencia - 10
+                            while (diferencia >= 5):
+                                billetes.append("5")
+                                diferencia = diferencia - 5
+                            while (diferencia >= 1):
+                                billetes.append("1")
+                                diferencia = diferencia - 1
+                        else:
+                            billetes.append("Pago justo, sin necesidad de vuelto.")
+                        
+                        return billetes
+                
+                
+                
+                
+                
+                    compra = int(input("total compra:"))
+                    recibido = int(input("Dinero recibido: "))
+                    
+                    while (recibido < compra):
+                        print("--ERROR 403-- Monto recibido menor a compra.")
+                        recibido = int(input("Dinero recibido: "))
+                    
+                    x = vuelto(compra, recibido)
+                    
+                    print(x)
+
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

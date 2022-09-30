@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/general_styles/HeaderAndFooter.css">
+    <script src="https://kit.fontawesome.com/09a525b3c6.js" crossorigin="anonymous"></script>
+    <script src="/general_scripts/hamburguerMenu.js" defer></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <header class="container" id="cabecera">
+        <div id="logo">
+           <a href="/index.html"><img src="/img/logo2.png" alt="" id="imagen_logo"></a>
+        </div>
+        <a class="toggle-button" href="#">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <ul class="cabeceraBotones" style="color: white;">
+            <a id="botonlink" href="/index.html"><li id="boton">Home</li></a>
+            <a id="botonlink" href="/internas/skills/index/index.html"><li id="boton">Skills</li></a>
+            <a id="botonlink" href="/internas/projects/index/index.html"><li id="boton">Projects</li></a>
+            <a id="botonlink" href="/internas/exercises/index/index.html"><li id="boton">Exercises</li></a>
+            <a id="botonlink" href="/internas/contacto/index.html"><li id="boton">Contact</li></a>
+        </ul>
+    </header>
+
+
+
+
+
+    <main>
+        <h1>Exercise 8</h1>
+        <div class="container_">
+            <div class="enunciado">
+                <p>Español: </p><br>
+                <p>8. La siguiente función permite averiguar el día de la semana para una fecha determi-
+                    nada. La fecha se suministra en forma de tres parámetros enteros y la función de-
+                    vuelve 0 para domingo, 1 para lunes, 2 para martes, etc. Escribir un programa
+                    para imprimir por pantalla el calendario de un mes completo, correspondiente a un
+                    mes y año cualquiera basándose en la función suministrada. Considerar que la se-
+                    mana comienza en domingo.
+                
+                <pre>
+
+                    def diadelasemana(dia,mes,año):
+                    if mes < 3:
+                    mes = mes + 10
+                    año = año — 1
+                    else:
+                    mes = mes — 2
+                    siglo = año // 100
+                    añoZ = año % 100
+                    diasem = (((26*mes-2)//1O)+dia+añ02+(añ02//4)+(siglo//4)—(2*siglo))%7
+                    if diasem < O:
+                    diasem = diasem + 7
+                    return diasem
+                </pre></p><br>
+
+                <p>English: </p><br>
+                <p>8. The following function allows you to find out the day of the week for a given date.
+                    any. The date is supplied as three integer parameters and the function de-
+                    returns 0 for Sunday, 1 for Monday, 2 for Tuesday, etc. write a program
+                    to print on the screen the calendar of a complete month, corresponding to a
+                    any month and year based on the supplied function. Consider that the
+                    mana starts on Sunday.
+                
+                    <pre>
+
+                        def diadelasemana(dia,mes,año):
+                        if mes < 3:
+                        mes = mes + 10
+                        año = año — 1
+                        else:
+                        mes = mes — 2
+                        siglo = año // 100
+                        añoZ = año % 100
+                        diasem = (((26*mes-2)//1O)+dia+añ02+(añ02//4)+(siglo//4)—(2*siglo))%7
+                        if diasem < O:
+                        diasem = diasem + 7
+                        return diasem
+                    </pre></p>
+            </div>
+            <div class="solution">
+                <pre class="prettyprint">
+
+                    
+                    def calcular():
+                        aux = -2
+                        max = -1
+                        for i in range(3):
+                            n = int(input("Numero: "))
+
+
+                            if n >= max:
+                                if (n == aux):
+                                    max = -1
+                                else:
+                                    aux = n
+                                    max = n
+                        return max
+                            
+
+                    mayor = calcular()
+
+                    print(mayor)
+
+                </pre>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer id="pie">
+        <div id="socialmedia">
+            <ul>
+                <li id="logocontact"><a href="https://github.com/DavidMonsalve"><i class="fa-brands fa-github"></a></i></li>
+                <li id="logocontact"><a href="https://www.linkedin.com/in/davmonsalve/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li id="logocontact"><a href="https://www.instagram.com/davmonsalve/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="logocontact"><a href="https://wa.me/+5492216816054"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li id="logocontact"><a href="https://t.me/davmonsalve"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+        <div id="linksFooter">
+            <ul>
+                <li id="linkF"><a href=""><p>About Me</p></a></li>
+                <li id="linkF"><a href=""><p>Contact</p></a></li>
+                <li id="linkF"><a href=""><p>Support</p></a></li>
+                <li id="linkF"><a href=""><p>Privacy</p></a></li>
+                <li id="linkF"><a href=""><p>Terms of Policy</p></a></li>
+                <li id="linkF"><a href=""><p>Sitemap</p></a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>&copy 2022 David Monsalve.</p>
+        </div>
+
+    </footer>
+</body>
+</html>
