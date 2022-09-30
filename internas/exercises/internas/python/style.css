@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 140vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: slategrey;
+}
+
+
+.container-a{
+    height: 60%;
+    width: 80%;
+
+    margin-top: 5%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-a-title{
+    background-color: aliceblue;
+    width: 80%;
+    height: 10%;
+
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exercises-section{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+
+/*COLUMNAS*/
+
+.e-column{
+    width: 90%;
+    height: 50%;
+    border: 1px solid;
+
+    display: flex;
+    margin-top: 5%;
+}
+
+.column-image{
+    height: 100%;
+    width: 20%;
+    border: 1px solid;
+
+    background-image: url(img/uade.jpg);
+    background-repeat: round;
+    background-size: cover;
+}
+
+.c-2{
+    background-color: white;
+    background-image: url(#);
+}
+
+.c-3{
+    background-color: white;
+    background-image: url(#);
+}
+
+.column-body{
+    width: 80%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title{
+    height: 40%;
+    width: 100%;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.column-textandButton{
+    height: 60%;
+    width: 100%;
+  /*  background-color: aqua; */
+}
+
+.column-text{
+    height: 60%;
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 2%;
+   /* background-color: azure; */
+}
+
+.column-button{
+    height: 40%;
+    width: 100%;
+   /* background-color: black; */
+}
+
+.column-button button{
+    height: 85%;
+    width: 18%;
+
+    margin-left: 80%;
+}
