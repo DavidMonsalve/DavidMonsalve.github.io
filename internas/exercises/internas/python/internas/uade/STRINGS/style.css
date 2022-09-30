@@ -38,10 +38,18 @@ h1{
     height: 90%;
     width: 18%;
     margin-left: 1.5%;
+    text-decoration: none;
 }
 
 .card{
     height: 100%;
     width: 100%;
     background-color: aliceblue;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: black;
 }
